@@ -1,0 +1,9 @@
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/Client.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/install.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/Client_autogen_timestamp_deps.dir
+/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/Client_autogen.dir
