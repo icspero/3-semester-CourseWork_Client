@@ -16,14 +16,66 @@
   <widget class="QPushButton" name="addTopicButton">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>210</y>
+     <x>100</x>
+     <y>190</y>
      <width>201</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
     <string>Создать тему</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addTopicButton_2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>260</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Удалить тему</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addTopicButton_3">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>190</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Создать задание</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addTopicButton_4">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>260</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Удалить задание</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addTopicButton_5">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>330</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Изменить роль</string>
    </property>
   </widget>
  </widget>

@@ -29,6 +29,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         loginwindow.h loginwindow.cpp loginwindow.ui
         adminwindow.h adminwindow.cpp adminwindow.ui
         addtopicwindow.h addtopicwindow.cpp addtopicwindow.ui
+        deletetopicwindow.h deletetopicwindow.cpp deletetopicwindow.ui
+        addtaskwindow.h addtaskwindow.cpp addtaskwindow.ui
+        deletetaskwindow.h deletetaskwindow.cpp deletetaskwindow.ui
+        changerolewindow.h changerolewindow.cpp changerolewindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Client APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

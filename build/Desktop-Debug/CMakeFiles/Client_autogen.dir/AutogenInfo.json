@@ -206,6 +206,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/addtaskwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_addtaskwindow.cpp",
+			null
+		],
+		[
 			"/home/icpero/Documents/3 semester/CourseWork/Client/addtopicwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_addtopicwindow.cpp",
@@ -218,9 +224,27 @@
 			null
 		],
 		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/changerolewindow.h",
+			"MU",
+			"EWIEGA46WW/moc_changerolewindow.cpp",
+			null
+		],
+		[
 			"/home/icpero/Documents/3 semester/CourseWork/Client/connection.h",
 			"MU",
 			"EWIEGA46WW/moc_connection.cpp",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/deletetaskwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_deletetaskwindow.cpp",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/deletetopicwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_deletetopicwindow.cpp",
 			null
 		],
 		[
@@ -301,6 +325,11 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/addtaskwindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/icpero/Documents/3 semester/CourseWork/Client/addtopicwindow.cpp",
 			"MU",
 			null
@@ -311,7 +340,22 @@
 			null
 		],
 		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/changerolewindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/icpero/Documents/3 semester/CourseWork/Client/connection.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/deletetaskwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/deletetopicwindow.cpp",
 			"MU",
 			null
 		],

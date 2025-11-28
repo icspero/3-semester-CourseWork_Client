@@ -26,10 +26,14 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_adminwindow_t {
-    uint offsetsAndSizes[6];
+    uint offsetsAndSizes[14];
     char stringdata0[12];
     char stringdata1[26];
     char stringdata2[1];
+    char stringdata3[28];
+    char stringdata4[28];
+    char stringdata5[28];
+    char stringdata6[28];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_adminwindow_t::offsetsAndSizes) + ofs), len 
@@ -37,11 +41,19 @@ Q_CONSTINIT static const qt_meta_stringdata_adminwindow_t qt_meta_stringdata_adm
     {
         QT_MOC_LITERAL(0, 11),  // "adminwindow"
         QT_MOC_LITERAL(12, 25),  // "on_addTopicButton_clicked"
-        QT_MOC_LITERAL(38, 0)   // ""
+        QT_MOC_LITERAL(38, 0),  // ""
+        QT_MOC_LITERAL(39, 27),  // "on_addTopicButton_2_clicked"
+        QT_MOC_LITERAL(67, 27),  // "on_addTopicButton_3_clicked"
+        QT_MOC_LITERAL(95, 27),  // "on_addTopicButton_4_clicked"
+        QT_MOC_LITERAL(123, 27)   // "on_addTopicButton_5_clicked"
     },
     "adminwindow",
     "on_addTopicButton_clicked",
-    ""
+    "",
+    "on_addTopicButton_2_clicked",
+    "on_addTopicButton_3_clicked",
+    "on_addTopicButton_4_clicked",
+    "on_addTopicButton_5_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -52,7 +64,7 @@ Q_CONSTINIT static const uint qt_meta_data_adminwindow[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,9 +72,17 @@ Q_CONSTINIT static const uint qt_meta_data_adminwindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   44,    2, 0x08,    1 /* Private */,
+       3,    0,   45,    2, 0x08,    2 /* Private */,
+       4,    0,   46,    2, 0x08,    3 /* Private */,
+       5,    0,   47,    2, 0x08,    4 /* Private */,
+       6,    0,   48,    2, 0x08,    5 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -78,6 +98,14 @@ Q_CONSTINIT const QMetaObject adminwindow::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<adminwindow, std::true_type>,
         // method 'on_addTopicButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_addTopicButton_2_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_addTopicButton_3_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_addTopicButton_4_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_addTopicButton_5_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -90,6 +118,10 @@ void adminwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         (void)_t;
         switch (_id) {
         case 0: _t->on_addTopicButton_clicked(); break;
+        case 1: _t->on_addTopicButton_2_clicked(); break;
+        case 2: _t->on_addTopicButton_3_clicked(); break;
+        case 3: _t->on_addTopicButton_4_clicked(); break;
+        case 4: _t->on_addTopicButton_5_clicked(); break;
         default: ;
         }
     }
@@ -115,13 +147,13 @@ int adminwindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 5;
     }
     return _id;
 }

@@ -20,6 +20,10 @@ class Ui_adminwindow
 {
 public:
     QPushButton *addTopicButton;
+    QPushButton *addTopicButton_2;
+    QPushButton *addTopicButton_3;
+    QPushButton *addTopicButton_4;
+    QPushButton *addTopicButton_5;
 
     void setupUi(QDialog *adminwindow)
     {
@@ -28,7 +32,19 @@ public:
         adminwindow->resize(637, 527);
         addTopicButton = new QPushButton(adminwindow);
         addTopicButton->setObjectName("addTopicButton");
-        addTopicButton->setGeometry(QRect(210, 210, 201, 51));
+        addTopicButton->setGeometry(QRect(100, 190, 201, 51));
+        addTopicButton_2 = new QPushButton(adminwindow);
+        addTopicButton_2->setObjectName("addTopicButton_2");
+        addTopicButton_2->setGeometry(QRect(100, 260, 201, 51));
+        addTopicButton_3 = new QPushButton(adminwindow);
+        addTopicButton_3->setObjectName("addTopicButton_3");
+        addTopicButton_3->setGeometry(QRect(320, 190, 201, 51));
+        addTopicButton_4 = new QPushButton(adminwindow);
+        addTopicButton_4->setObjectName("addTopicButton_4");
+        addTopicButton_4->setGeometry(QRect(320, 260, 201, 51));
+        addTopicButton_5 = new QPushButton(adminwindow);
+        addTopicButton_5->setObjectName("addTopicButton_5");
+        addTopicButton_5->setGeometry(QRect(100, 330, 201, 51));
 
         retranslateUi(adminwindow);
 
@@ -39,6 +55,10 @@ public:
     {
         adminwindow->setWindowTitle(QCoreApplication::translate("adminwindow", "Dialog", nullptr));
         addTopicButton->setText(QCoreApplication::translate("adminwindow", "\320\241\320\276\320\267\320\264\320\260\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
+        addTopicButton_2->setText(QCoreApplication::translate("adminwindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
+        addTopicButton_3->setText(QCoreApplication::translate("adminwindow", "\320\241\320\276\320\267\320\264\320\260\321\202\321\214 \320\267\320\260\320\264\320\260\320\275\320\270\320\265", nullptr));
+        addTopicButton_4->setText(QCoreApplication::translate("adminwindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214 \320\267\320\260\320\264\320\260\320\275\320\270\320\265", nullptr));
+        addTopicButton_5->setText(QCoreApplication::translate("adminwindow", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214 \321\200\320\276\320\273\321\214", nullptr));
     } // retranslateUi
 
 };

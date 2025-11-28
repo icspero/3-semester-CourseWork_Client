@@ -35,7 +35,7 @@ void MainWindow::on_exitButton_clicked()
     if (reply == QMessageBox::Yes) {
         close();
     } else {
-        // Пользователь нажал "No"
+
     }
 
 }

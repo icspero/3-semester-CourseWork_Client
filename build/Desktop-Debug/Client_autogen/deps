@@ -1,5 +1,7 @@
 Client_autogen/timestamp: \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/CMakeLists.txt \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/addtaskwindow.cpp \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/addtaskwindow.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/addtopicwindow.cpp \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/addtopicwindow.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/adminwindow.cpp \
@@ -8,8 +10,14 @@ Client_autogen/timestamp: \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/build/Desktop-Debug/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/moc_predefs.h \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/changerolewindow.cpp \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/changerolewindow.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/connection.cpp \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/connection.h \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/deletetaskwindow.cpp \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/deletetaskwindow.h \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/deletetopicwindow.cpp \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/deletetopicwindow.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/header.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/loginwindow.cpp \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/loginwindow.h \
@@ -573,8 +581,12 @@ Client_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/addtaskwindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/addtopicwindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/adminwindow.ui \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/changerolewindow.ui \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/deletetaskwindow.ui \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/deletetopicwindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/loginwindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/mainwindow.ui \
 	/usr/bin/cmake
