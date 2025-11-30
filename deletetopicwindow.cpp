@@ -10,6 +10,9 @@ deletetopicwindow::deletetopicwindow(Connection *connection, QWidget *parent)
 {
     ui->setupUi(this);
     loadTopics();
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 deletetopicwindow::~deletetopicwindow()
@@ -19,30 +22,34 @@ deletetopicwindow::~deletetopicwindow()
 
 void deletetopicwindow::on_pushButton_clicked()
 {
-    QString selectedTopic = ui->comboBox->currentText();
+    try {
+        QString selectedTopic = ui->comboBox->currentText();
 
-    if (selectedTopic.isEmpty()) {
-        QMessageBox::warning(this, "Ошибка", "Вы не выбрали тему!");
-        return;
-    }
-    if (selectedTopic != "Темы не найдены!") {
-        QMessageBox::StandardButton reply;
-        reply = QMessageBox::question(this, "Удалить тему", "Вы уверены, что хотите удалить тему??", QMessageBox::Yes | QMessageBox::No);
-
-        if (reply == QMessageBox::Yes) {
-            QString message = "deletetopic|" + selectedTopic;
-
-            connection->sendMessage(message.toStdString());
-
-            QString serverResponse = QString::fromStdString(connection->acceptMessage());
-
-            QMessageBox::information(this, "Ответ сервера", serverResponse);
-
-            int index = ui->comboBox->currentIndex();
-            ui->comboBox->removeItem(index);
-        } else {
-
+        if (selectedTopic.isEmpty()) {
+            QMessageBox::warning(this, "Ошибка", "Вы не выбрали тему!");
+            return;
         }
+        if (selectedTopic != "Темы не найдены!") {
+            QMessageBox::StandardButton reply;
+            reply = QMessageBox::question(this, "Удалить тему", "Вы уверены, что хотите удалить тему?", QMessageBox::Yes | QMessageBox::No);
+
+            if (reply == QMessageBox::Yes) {
+                QString message = "deletetopic|" + selectedTopic;
+
+                connection->sendMessage(message.toStdString());
+
+                QString serverResponse = QString::fromStdString(connection->acceptMessage());
+
+                QMessageBox::information(this, "Ответ сервера", serverResponse);
+
+                int index = ui->comboBox->currentIndex();
+                ui->comboBox->removeItem(index);
+            } else {
+
+            }
+        }
+    } catch (const runtime_error& error) {
+        QMessageBox::critical(this, "Ошибка", error.what());
     }
 }
 

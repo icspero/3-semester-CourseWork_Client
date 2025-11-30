@@ -10,6 +10,9 @@ deletetaskwindow::deletetaskwindow(Connection *connection, QWidget *parent)
 {
     ui->setupUi(this);
     loadTopics();
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 deletetaskwindow::~deletetaskwindow()
@@ -19,39 +22,43 @@ deletetaskwindow::~deletetaskwindow()
 
 void deletetaskwindow::on_pushButton_clicked()
 {
-    QString selectedTopic = ui->comboBox->currentText();
-    if (selectedTopic.isEmpty()) {
-        QMessageBox::warning(this, "Ошибка", "Вы не выбрали тему!");
-        return;
-    }
+    try {
+        QString selectedTopic = ui->comboBox->currentText();
+        if (selectedTopic.isEmpty()) {
+            QMessageBox::warning(this, "Ошибка", "Вы не выбрали тему!");
+            return;
+        }
 
-    loadTasks(selectedTopic);
-    QString selectedTask = ui->comboBox_2->currentText();
+        loadTasks(selectedTopic);
+        QString selectedTask = ui->comboBox_2->currentText();
 
-    if (selectedTask.isEmpty()) {
-        QMessageBox::warning(this, "Ошибка", "Вы не выбрали задание!");
-        return;
-    }
+        if (selectedTask.isEmpty()) {
+            QMessageBox::warning(this, "Ошибка", "Вы не выбрали задание!");
+            return;
+        }
 
-    if (selectedTask != ("Для темы '" + selectedTopic + "' заданий нет!")) {
-        if (selectedTask != "Отсутствуют темы!") {
-            QMessageBox::StandardButton reply;
-            reply = QMessageBox::question(this, "Удаление задания", "Вы уверены, что хотите удалить задание??", QMessageBox::Yes | QMessageBox::No);
+        if (selectedTask != ("Для темы '" + selectedTopic + "' заданий нет!")) {
+            if (selectedTask != "Отсутствуют темы!") {
+                QMessageBox::StandardButton reply;
+                reply = QMessageBox::question(this, "Удаление задания", "Вы уверены, что хотите удалить задание?", QMessageBox::Yes | QMessageBox::No);
 
-            if (reply == QMessageBox::Yes) {
-                QString numberStr = selectedTask.section(']', 0, 0).remove('[');
-                QString message = "deletetask|" + numberStr;
+                if (reply == QMessageBox::Yes) {
+                    QString numberStr = selectedTask.section(']', 0, 0).remove('[');
+                    QString message = "deletetask|" + numberStr;
 
-                connection->sendMessage(message.toStdString());
+                    connection->sendMessage(message.toStdString());
 
-                QString serverResponse = QString::fromStdString(connection->acceptMessage());
+                    QString serverResponse = QString::fromStdString(connection->acceptMessage());
 
-                QMessageBox::information(this, "Ответ сервера", serverResponse);
+                    QMessageBox::information(this, "Ответ сервера", serverResponse);
 
-                int index = ui->comboBox->currentIndex();
-                ui->comboBox->removeItem(index);
+                    int index = ui->comboBox->currentIndex();
+                    ui->comboBox->removeItem(index);
+                }
             }
         }
+    } catch (const runtime_error& error) {
+        QMessageBox::critical(this, "Ошибка", error.what());
     }
 }
 

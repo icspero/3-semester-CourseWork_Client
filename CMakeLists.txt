@@ -33,6 +33,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         addtaskwindow.h addtaskwindow.cpp addtaskwindow.ui
         deletetaskwindow.h deletetaskwindow.cpp deletetaskwindow.ui
         changerolewindow.h changerolewindow.cpp changerolewindow.ui
+        user_rolewindow.h user_rolewindow.cpp user_rolewindow.ui
+        registerwindow.h registerwindow.cpp registerwindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Client APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

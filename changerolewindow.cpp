@@ -11,6 +11,9 @@ changerole::changerole(Connection *connection, QWidget *parent)
     ui->setupUi(this);
     loadRoles();
     loadUsers();
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 changerole::~changerole()
@@ -48,27 +51,31 @@ void changerole::loadUsers() {
 
 void changerole::on_pushButton_clicked()
 {
-    QString User = ui->comboBox->currentText();
-    if (User.isEmpty()) {
-        QMessageBox::warning(this, "Ошибка", "Вы не выбрали пользователя!");
-        return;
-    }
-    QString Role = ui->comboBox_2->currentText();
-    if (Role.isEmpty()) {
-        QMessageBox::warning(this, "Ошибка", "Вы не выбрали роль!");
-        return;
-    }
-    QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Смена роли", "Вы уверены, что хотите сменить роль для пользователя??", QMessageBox::Yes | QMessageBox::No);
+    try {
+        QString User = ui->comboBox->currentText();
+        if (User.isEmpty()) {
+            QMessageBox::warning(this, "Ошибка", "Вы не выбрали пользователя!");
+            return;
+        }
+        QString Role = ui->comboBox_2->currentText();
+        if (Role.isEmpty()) {
+            QMessageBox::warning(this, "Ошибка", "Вы не выбрали роль!");
+            return;
+        }
+        QMessageBox::StandardButton reply;
+        reply = QMessageBox::question(this, "Смена роли", "Вы уверены, что хотите сменить роль для пользователя?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {
-        QString message = QString("changerole|%1|%2").arg(User).arg(Role);
-        connection->sendMessage(message.toStdString()); // Отправляем объединенное сообщение
+        if (reply == QMessageBox::Yes) {
+            QString message = QString("changerole|%1|%2").arg(User).arg(Role);
+            connection->sendMessage(message.toStdString()); // Отправляем объединенное сообщение
 
-        QString result = QString::fromStdString(connection->acceptMessage()); // Принимаем ответ от сервера
-        QMessageBox::information(this, "Результат", result); // Выводим ответ сервера
-    } else {
+            QString result = QString::fromStdString(connection->acceptMessage()); // Принимаем ответ от сервера
+            QMessageBox::information(this, "Результат", result); // Выводим ответ сервера
+        } else {
 
+        }
+    } catch (const runtime_error& error) {
+        QMessageBox::critical(this, "Ошибка", error.what());
     }
 }
 

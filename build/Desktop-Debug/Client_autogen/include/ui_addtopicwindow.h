@@ -72,7 +72,7 @@ public:
         label->setText(QCoreApplication::translate("addtopicwindow", "\320\242\320\265\320\274\320\260:", nullptr));
         label_2->setText(QCoreApplication::translate("addtopicwindow", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265:", nullptr));
         label_3->setText(QCoreApplication::translate("addtopicwindow", "\320\242\320\265\320\276\321\200\320\270\321\217:", nullptr));
-        pushButton->setText(QCoreApplication::translate("addtopicwindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
+        pushButton->setText(QCoreApplication::translate("addtopicwindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
         pushButton_2->setText(QCoreApplication::translate("addtopicwindow", "\320\223\320\273\320\260\320\262\320\275\320\276\320\265 \320\274\320\265\320\275\321\216", nullptr));
     } // retranslateUi
 

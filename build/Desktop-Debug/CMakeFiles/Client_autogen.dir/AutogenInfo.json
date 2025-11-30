@@ -264,6 +264,18 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/registerwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_registerwindow.cpp",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/user_rolewindow.h",
+			"MU",
+			"EWIEGA46WW/moc_user_rolewindow.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -371,6 +383,16 @@
 		],
 		[
 			"/home/icpero/Documents/3 semester/CourseWork/Client/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/registerwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/user_rolewindow.cpp",
 			"MU",
 			null
 		]

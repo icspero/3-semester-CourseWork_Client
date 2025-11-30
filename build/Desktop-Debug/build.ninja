@@ -137,6 +137,22 @@ build CMakeFiles/Client.dir/changerolewindow.cpp.o: CXX_COMPILER__Client_unscann
   OBJECT_DIR = CMakeFiles/Client.dir
   OBJECT_FILE_DIR = CMakeFiles/Client.dir
 
+build CMakeFiles/Client.dir/user_rolewindow.cpp.o: CXX_COMPILER__Client_unscanned_Debug /home/icpero/Documents/3$ semester/CourseWork/Client/user_rolewindow.cpp || cmake_object_order_depends_target_Client
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Client.dir/user_rolewindow.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I"/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/Client.dir
+  OBJECT_FILE_DIR = CMakeFiles/Client.dir
+
+build CMakeFiles/Client.dir/registerwindow.cpp.o: CXX_COMPILER__Client_unscanned_Debug /home/icpero/Documents/3$ semester/CourseWork/Client/registerwindow.cpp || cmake_object_order_depends_target_Client
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Client.dir/registerwindow.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I"/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/include" -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/Client.dir
+  OBJECT_FILE_DIR = CMakeFiles/Client.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Client
@@ -145,7 +161,7 @@ build CMakeFiles/Client.dir/changerolewindow.cpp.o: CXX_COMPILER__Client_unscann
 #############################################
 # Link the executable Client
 
-build Client: CXX_EXECUTABLE_LINKER__Client_Debug CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o CMakeFiles/Client.dir/main.cpp.o CMakeFiles/Client.dir/mainwindow.cpp.o CMakeFiles/Client.dir/connection.cpp.o CMakeFiles/Client.dir/loginwindow.cpp.o CMakeFiles/Client.dir/adminwindow.cpp.o CMakeFiles/Client.dir/addtopicwindow.cpp.o CMakeFiles/Client.dir/deletetopicwindow.cpp.o CMakeFiles/Client.dir/addtaskwindow.cpp.o CMakeFiles/Client.dir/deletetaskwindow.cpp.o CMakeFiles/Client.dir/changerolewindow.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Client_autogen Client_autogen_timestamp_deps
+build Client: CXX_EXECUTABLE_LINKER__Client_Debug CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o CMakeFiles/Client.dir/main.cpp.o CMakeFiles/Client.dir/mainwindow.cpp.o CMakeFiles/Client.dir/connection.cpp.o CMakeFiles/Client.dir/loginwindow.cpp.o CMakeFiles/Client.dir/adminwindow.cpp.o CMakeFiles/Client.dir/addtopicwindow.cpp.o CMakeFiles/Client.dir/deletetopicwindow.cpp.o CMakeFiles/Client.dir/addtaskwindow.cpp.o CMakeFiles/Client.dir/deletetaskwindow.cpp.o CMakeFiles/Client.dir/changerolewindow.cpp.o CMakeFiles/Client.dir/user_rolewindow.cpp.o CMakeFiles/Client.dir/registerwindow.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Client_autogen Client_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/Client.dir
@@ -229,7 +245,7 @@ build Client_autogen_timestamp_deps: phony CMakeFiles/Client_autogen_timestamp_d
 #############################################
 # Utility command for Client_autogen
 
-build Client_autogen: phony CMakeFiles/Client_autogen Client_autogen/include/ui_mainwindow.h Client_autogen/include/ui_loginwindow.h Client_autogen/include/ui_adminwindow.h Client_autogen/include/ui_addtopicwindow.h Client_autogen/include/ui_deletetopicwindow.h Client_autogen/include/ui_addtaskwindow.h Client_autogen/include/ui_deletetaskwindow.h Client_autogen/include/ui_changerolewindow.h Client_autogen/timestamp Client_autogen/mocs_compilation.cpp Client_autogen_timestamp_deps
+build Client_autogen: phony CMakeFiles/Client_autogen Client_autogen/include/ui_mainwindow.h Client_autogen/include/ui_loginwindow.h Client_autogen/include/ui_adminwindow.h Client_autogen/include/ui_addtopicwindow.h Client_autogen/include/ui_deletetopicwindow.h Client_autogen/include/ui_addtaskwindow.h Client_autogen/include/ui_deletetaskwindow.h Client_autogen/include/ui_changerolewindow.h Client_autogen/include/ui_user_rolewindow.h Client_autogen/include/ui_registerwindow.h Client_autogen/timestamp Client_autogen/mocs_compilation.cpp Client_autogen_timestamp_deps
 
 
 #############################################
@@ -245,13 +261,13 @@ build Client_autogen/timestamp Client_autogen/mocs_compilation.cpp | ${cmake_nin
 #############################################
 # Phony custom command for CMakeFiles/Client_autogen_timestamp_deps
 
-build CMakeFiles/Client_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Client_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc
+build CMakeFiles/Client_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Client_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/qt6/libexec/moc
 
 
 #############################################
 # Phony custom command for CMakeFiles/Client_autogen
 
-build CMakeFiles/Client_autogen Client_autogen/include/ui_mainwindow.h Client_autogen/include/ui_loginwindow.h Client_autogen/include/ui_adminwindow.h Client_autogen/include/ui_addtopicwindow.h Client_autogen/include/ui_deletetopicwindow.h Client_autogen/include/ui_addtaskwindow.h Client_autogen/include/ui_deletetaskwindow.h Client_autogen/include/ui_changerolewindow.h | ${cmake_ninja_workdir}CMakeFiles/Client_autogen ${cmake_ninja_workdir}Client_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_loginwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_adminwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_addtopicwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_deletetopicwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_addtaskwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_deletetaskwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_changerolewindow.h: phony Client_autogen/timestamp || Client_autogen_timestamp_deps
+build CMakeFiles/Client_autogen Client_autogen/include/ui_mainwindow.h Client_autogen/include/ui_loginwindow.h Client_autogen/include/ui_adminwindow.h Client_autogen/include/ui_addtopicwindow.h Client_autogen/include/ui_deletetopicwindow.h Client_autogen/include/ui_addtaskwindow.h Client_autogen/include/ui_deletetaskwindow.h Client_autogen/include/ui_changerolewindow.h Client_autogen/include/ui_user_rolewindow.h Client_autogen/include/ui_registerwindow.h | ${cmake_ninja_workdir}CMakeFiles/Client_autogen ${cmake_ninja_workdir}Client_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_loginwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_adminwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_addtopicwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_deletetopicwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_addtaskwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_deletetaskwindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_changerolewindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_user_rolewindow.h ${cmake_ninja_workdir}Client_autogen/include/ui_registerwindow.h: phony Client_autogen/timestamp || Client_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

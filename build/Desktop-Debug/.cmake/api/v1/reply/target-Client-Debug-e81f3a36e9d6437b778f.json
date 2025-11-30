@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 72,
+				"line" : 74,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 55,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
@@ -292,7 +292,9 @@
 				18,
 				21,
 				24,
-				27
+				27,
+				30,
+				33
 			]
 		}
 	],
@@ -384,7 +386,9 @@
 				18,
 				21,
 				24,
-				27
+				27,
+				30,
+				33
 			]
 		},
 		{
@@ -402,13 +406,17 @@
 				23,
 				26,
 				29,
-				30,
-				31,
 				32,
-				33,
-				34,
 				35,
-				36
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44
 			]
 		},
 		{
@@ -423,14 +431,16 @@
 				22,
 				25,
 				28,
-				37
+				31,
+				34,
+				45
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				38
+				46
 			]
 		}
 	],
@@ -579,18 +589,50 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "changerole.h",
+			"path" : "changerolewindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "changerole.cpp",
+			"path" : "changerolewindow.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
-			"path" : "changerole.ui",
+			"path" : "changerolewindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "user_rolewindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "user_rolewindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "user_rolewindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "registerwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "registerwindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "registerwindow.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -638,7 +680,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/Client_autogen/include/ui_changerole.h",
+			"path" : "build/Desktop-Debug/Client_autogen/include/ui_changerolewindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/Client_autogen/include/ui_user_rolewindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/Client_autogen/include/ui_registerwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{

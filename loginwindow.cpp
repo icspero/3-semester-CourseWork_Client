@@ -2,6 +2,7 @@
 #include "ui_loginwindow.h"
 #include "adminwindow.h"
 #include <QMessageBox>
+#include "registerwindow.h"
 
 login::login(Connection *connection, QWidget *parent)
     : QDialog(parent)
@@ -10,6 +11,9 @@ login::login(Connection *connection, QWidget *parent)
 {
     ui->setupUi(this);
     ui->passwordEdit->setEchoMode(QLineEdit::Password);
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 login::~login()
@@ -50,3 +54,21 @@ void login::on_loginButton_clicked()
         QMessageBox::critical(this, "Ошибка", error.what());
     }
 }
+
+void login::on_pushButton_clicked()
+{
+    this->close();
+    registerwindow window(connection);
+    window.setModal(true);
+    window.exec();
+}
+
+
+void login::on_pushButton_2_clicked()
+{
+    QMessageBox::StandardButton exitButton = QMessageBox::question(this, "Выход", "Вы уверены, что хотите выйти?", QMessageBox::Yes | QMessageBox::No);
+    if(exitButton == QMessageBox::Yes){
+        QApplication::quit();
+    }
+}
+

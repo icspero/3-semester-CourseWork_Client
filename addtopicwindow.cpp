@@ -9,6 +9,9 @@ addtopicwindow::addtopicwindow(Connection *connection, QWidget *parent)
     , connection(connection)
 {
     ui->setupUi(this);
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 addtopicwindow::~addtopicwindow()

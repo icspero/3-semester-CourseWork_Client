@@ -27,6 +27,10 @@ private slots:
 
     void on_addTopicButton_5_clicked();
 
+    void on_addTopicButton_6_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::adminwindow *ui;
     Connection *connection;

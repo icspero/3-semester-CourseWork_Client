@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'loginwindow.h'
+** Meta object code from reading C++ file 'user_rolewindow.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
 **
@@ -7,10 +7,10 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../../loginwindow.h"
+#include "../../../../user_rolewindow.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'loginwindow.h' doesn't include <QObject>."
+#error "The header file 'user_rolewindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -25,34 +25,34 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
-struct qt_meta_stringdata_login_t {
+struct qt_meta_stringdata_user_rolewindow_t {
     uint offsetsAndSizes[10];
-    char stringdata0[6];
-    char stringdata1[23];
+    char stringdata0[16];
+    char stringdata1[22];
     char stringdata2[1];
-    char stringdata3[22];
+    char stringdata3[24];
     char stringdata4[24];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_login_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_login_t qt_meta_stringdata_login = {
+    uint(sizeof(qt_meta_stringdata_user_rolewindow_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_user_rolewindow_t qt_meta_stringdata_user_rolewindow = {
     {
-        QT_MOC_LITERAL(0, 5),  // "login"
-        QT_MOC_LITERAL(6, 22),  // "on_loginButton_clicked"
-        QT_MOC_LITERAL(29, 0),  // ""
-        QT_MOC_LITERAL(30, 21),  // "on_pushButton_clicked"
-        QT_MOC_LITERAL(52, 23)   // "on_pushButton_2_clicked"
+        QT_MOC_LITERAL(0, 15),  // "user_rolewindow"
+        QT_MOC_LITERAL(16, 21),  // "on_pushButton_clicked"
+        QT_MOC_LITERAL(38, 0),  // ""
+        QT_MOC_LITERAL(39, 23),  // "on_pushButton_2_clicked"
+        QT_MOC_LITERAL(63, 23)   // "on_pushButton_3_clicked"
     },
-    "login",
-    "on_loginButton_clicked",
-    "",
+    "user_rolewindow",
     "on_pushButton_clicked",
-    "on_pushButton_2_clicked"
+    "",
+    "on_pushButton_2_clicked",
+    "on_pushButton_3_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_login[] = {
+Q_CONSTINIT static const uint qt_meta_data_user_rolewindow[] = {
 
  // content:
       10,       // revision
@@ -78,54 +78,54 @@ Q_CONSTINIT static const uint qt_meta_data_login[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject login::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject user_rolewindow::staticMetaObject = { {
     QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
-    qt_meta_stringdata_login.offsetsAndSizes,
-    qt_meta_data_login,
+    qt_meta_stringdata_user_rolewindow.offsetsAndSizes,
+    qt_meta_data_user_rolewindow,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_login_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_user_rolewindow_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<login, std::true_type>,
-        // method 'on_loginButton_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<user_rolewindow, std::true_type>,
         // method 'on_pushButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_2_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_3_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
 
-void login::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void user_rolewindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<login *>(_o);
+        auto *_t = static_cast<user_rolewindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_loginButton_clicked(); break;
-        case 1: _t->on_pushButton_clicked(); break;
-        case 2: _t->on_pushButton_2_clicked(); break;
+        case 0: _t->on_pushButton_clicked(); break;
+        case 1: _t->on_pushButton_2_clicked(); break;
+        case 2: _t->on_pushButton_3_clicked(); break;
         default: ;
         }
     }
     (void)_a;
 }
 
-const QMetaObject *login::metaObject() const
+const QMetaObject *user_rolewindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *login::qt_metacast(const char *_clname)
+void *user_rolewindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_login.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_user_rolewindow.stringdata0))
         return static_cast<void*>(this);
     return QDialog::qt_metacast(_clname);
 }
 
-int login::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int user_rolewindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

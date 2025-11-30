@@ -6,6 +6,7 @@
 #include "deletetaskwindow.h"
 #include "ui_adminwindow.h"
 #include "changerolewindow.h"
+#include "user_rolewindow.h"
 
 adminwindow::adminwindow(Connection *connection, QWidget *parent)
     : QDialog(parent)
@@ -13,6 +14,9 @@ adminwindow::adminwindow(Connection *connection, QWidget *parent)
     , connection(connection)
 {
     ui->setupUi(this);
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 adminwindow::~adminwindow()
@@ -59,6 +63,24 @@ void adminwindow::on_addTopicButton_5_clicked()
 {
     this->close();
     changerole window(connection);
+    window.setModal(true);
+    window.exec();
+}
+
+
+void adminwindow::on_addTopicButton_6_clicked()
+{
+    this->close();
+    user_rolewindow window(connection);
+    window.setModal(true);
+    window.exec();
+}
+
+
+void adminwindow::on_pushButton_clicked()
+{
+    this->close();
+    login window(connection);
     window.setModal(true);
     window.exec();
 }

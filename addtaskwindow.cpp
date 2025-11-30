@@ -10,6 +10,9 @@ addtaskwindow::addtaskwindow(Connection *connection, QWidget *parent)
 {
     ui->setupUi(this);
     loadTopics();
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 addtaskwindow::~addtaskwindow()
@@ -47,7 +50,7 @@ void addtaskwindow::on_pushButton_clicked()
             QString task = ui->textEdit->toPlainText();
             QString answer = ui->textEdit_2->toPlainText();
             if (task.isEmpty() || answer.isEmpty()) {
-                QMessageBox::warning(this, "Внимание", "Пожалуйста, заполните все поля.");
+                QMessageBox::warning(this, "Внимание", "Пожалуйста, заполните все поля!");
                 return;
             }
 
