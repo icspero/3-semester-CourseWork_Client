@@ -35,13 +35,13 @@ public:
         changerole->resize(603, 472);
         comboBox = new QComboBox(changerole);
         comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(200, 160, 191, 31));
+        comboBox->setGeometry(QRect(180, 160, 231, 31));
         comboBox_2 = new QComboBox(changerole);
         comboBox_2->setObjectName("comboBox_2");
-        comboBox_2->setGeometry(QRect(200, 250, 191, 31));
+        comboBox_2->setGeometry(QRect(180, 230, 231, 31));
         label = new QLabel(changerole);
         label->setObjectName("label");
-        label->setGeometry(QRect(240, 220, 131, 21));
+        label->setGeometry(QRect(240, 200, 131, 21));
         label_2 = new QLabel(changerole);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(210, 120, 181, 41));
@@ -50,7 +50,7 @@ public:
         pushButton->setGeometry(QRect(180, 300, 231, 51));
         pushButton_2 = new QPushButton(changerole);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(220, 360, 151, 31));
+        pushButton_2->setGeometry(QRect(220, 370, 151, 31));
 
         retranslateUi(changerole);
 

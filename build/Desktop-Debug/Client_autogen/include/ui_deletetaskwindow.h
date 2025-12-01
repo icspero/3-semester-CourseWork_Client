@@ -35,13 +35,13 @@ public:
         deletetaskwindow->resize(690, 515);
         comboBox = new QComboBox(deletetaskwindow);
         comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(220, 80, 221, 31));
+        comboBox->setGeometry(QRect(220, 80, 301, 31));
         label = new QLabel(deletetaskwindow);
         label->setObjectName("label");
         label->setGeometry(QRect(110, 80, 111, 21));
         comboBox_2 = new QComboBox(deletetaskwindow);
         comboBox_2->setObjectName("comboBox_2");
-        comboBox_2->setGeometry(QRect(220, 130, 221, 31));
+        comboBox_2->setGeometry(QRect(220, 130, 301, 31));
         label_2 = new QLabel(deletetaskwindow);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(90, 130, 131, 31));

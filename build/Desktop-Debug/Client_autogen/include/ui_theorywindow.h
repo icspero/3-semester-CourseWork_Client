@@ -38,7 +38,7 @@ public:
         theorywindow->resize(800, 600);
         comboBox = new QComboBox(theorywindow);
         comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(250, 40, 261, 31));
+        comboBox->setGeometry(QRect(220, 40, 321, 31));
         textEdit = new QTextEdit(theorywindow);
         textEdit->setObjectName("textEdit");
         textEdit->setGeometry(QRect(80, 150, 621, 61));

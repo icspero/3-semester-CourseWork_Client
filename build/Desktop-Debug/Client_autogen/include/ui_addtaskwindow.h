@@ -53,7 +53,7 @@ public:
         pushButton->setGeometry(QRect(220, 340, 201, 61));
         comboBox = new QComboBox(addtaskwindow);
         comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(230, 100, 231, 31));
+        comboBox->setGeometry(QRect(230, 100, 271, 31));
         label_4 = new QLabel(addtaskwindow);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(120, 100, 111, 20));

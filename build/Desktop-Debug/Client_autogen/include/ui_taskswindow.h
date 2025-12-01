@@ -32,7 +32,6 @@ public:
     QLineEdit *lineEdit;
     QLabel *label_2;
     QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
     QPushButton *pushButton_6;
 
     void setupUi(QDialog *taskswindow)
@@ -60,16 +59,13 @@ public:
         pushButton_3->setGeometry(QRect(430, 350, 181, 31));
         lineEdit = new QLineEdit(taskswindow);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(300, 430, 171, 31));
+        lineEdit->setGeometry(QRect(300, 430, 251, 31));
         label_2 = new QLabel(taskswindow);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(240, 430, 61, 31));
         pushButton_4 = new QPushButton(taskswindow);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(490, 430, 91, 26));
-        pushButton_5 = new QPushButton(taskswindow);
-        pushButton_5->setObjectName("pushButton_5");
-        pushButton_5->setGeometry(QRect(800, 490, 221, 41));
+        pushButton_4->setGeometry(QRect(570, 430, 91, 26));
         pushButton_6 = new QPushButton(taskswindow);
         pushButton_6->setObjectName("pushButton_6");
         pushButton_6->setGeometry(QRect(300, 540, 211, 41));
@@ -88,7 +84,6 @@ public:
         pushButton_3->setText(QCoreApplication::translate("taskswindow", "\320\241\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\265 \320\267\320\260\320\264\320\260\320\275\320\270\320\265", nullptr));
         label_2->setText(QCoreApplication::translate("taskswindow", "\320\236\321\202\320\262\320\265\321\202", nullptr));
         pushButton_4->setText(QCoreApplication::translate("taskswindow", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("taskswindow", "\320\223\320\273\320\260\320\262\320\275\320\276\320\265 \320\274\320\265\320\275\321\216", nullptr));
         pushButton_6->setText(QCoreApplication::translate("taskswindow", "\320\223\320\273\320\260\320\262\320\275\320\276\320\265 \320\274\320\265\320\275\321\216", nullptr));
     } // retranslateUi
 

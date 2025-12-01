@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
 
@@ -23,13 +22,13 @@ class Ui_addtopicwindow
 {
 public:
     QTextEdit *theoryEdit;
-    QLineEdit *cipherEdit;
     QTextEdit *descEdit;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QTextEdit *textEdit;
 
     void setupUi(QDialog *addtopicwindow)
     {
@@ -39,9 +38,6 @@ public:
         theoryEdit = new QTextEdit(addtopicwindow);
         theoryEdit->setObjectName("theoryEdit");
         theoryEdit->setGeometry(QRect(130, 130, 391, 181));
-        cipherEdit = new QLineEdit(addtopicwindow);
-        cipherEdit->setObjectName("cipherEdit");
-        cipherEdit->setGeometry(QRect(130, 30, 391, 31));
         descEdit = new QTextEdit(addtopicwindow);
         descEdit->setObjectName("descEdit");
         descEdit->setGeometry(QRect(130, 80, 391, 31));
@@ -60,6 +56,9 @@ public:
         pushButton_2 = new QPushButton(addtopicwindow);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(230, 410, 181, 31));
+        textEdit = new QTextEdit(addtopicwindow);
+        textEdit->setObjectName("textEdit");
+        textEdit->setGeometry(QRect(130, 30, 391, 31));
 
         retranslateUi(addtopicwindow);
 

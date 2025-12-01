@@ -37,10 +37,10 @@ public:
         login->resize(683, 524);
         loginEdit = new QLineEdit(login);
         loginEdit->setObjectName("loginEdit");
-        loginEdit->setGeometry(QRect(300, 180, 113, 26));
+        loginEdit->setGeometry(QRect(300, 180, 171, 26));
         passwordEdit = new QLineEdit(login);
         passwordEdit->setObjectName("passwordEdit");
-        passwordEdit->setGeometry(QRect(300, 220, 113, 26));
+        passwordEdit->setGeometry(QRect(300, 220, 171, 26));
         passwordEdit->setEchoMode(QLineEdit::Password);
         loginLabel = new QLabel(login);
         loginLabel->setObjectName("loginLabel");
