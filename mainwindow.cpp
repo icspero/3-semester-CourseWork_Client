@@ -33,13 +33,10 @@ void MainWindow::on_startButton_clicked()
 void MainWindow::on_exitButton_clicked()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Выход", "Вы уверены, что хотите выйти?", QMessageBox::Yes | QMessageBox::No);
+    reply = QMessageBox::question(this, "Выход", "Вы уверены, что хотите закрыть программу?", QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
         close();
-    } else {
-
     }
-
 }
 

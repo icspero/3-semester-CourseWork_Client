@@ -22,11 +22,11 @@ addtopicwindow::~addtopicwindow()
 void addtopicwindow::on_pushButton_clicked()
 {
     try {
-        QString cipher = ui->cipherEdit->text();
+        QString cipher = ui->textEdit->toPlainText();
         QString description = ui->descEdit->toPlainText();
         QString theory = ui->theoryEdit->toPlainText();
         if (cipher.isEmpty() || description.isEmpty() || theory.isEmpty()) {
-            QMessageBox::warning(this, "Внимание", "Пожалуйста, заполните все поля.");
+            QMessageBox::warning(this, "Внимание", "Пожалуйста, заполните все поля!");
             return;
         }
 

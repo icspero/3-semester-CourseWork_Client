@@ -29,7 +29,7 @@ void deletetopicwindow::on_pushButton_clicked()
             QMessageBox::warning(this, "Ошибка", "Вы не выбрали тему!");
             return;
         }
-        if (selectedTopic != "Темы не найдены!") {
+        if (selectedTopic != "Темы не найдены") {
             QMessageBox::StandardButton reply;
             reply = QMessageBox::question(this, "Удалить тему", "Вы уверены, что хотите удалить тему?", QMessageBox::Yes | QMessageBox::No);
 

@@ -272,9 +272,27 @@
 			null
 		],
 		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/taskswindow.h",
+			"MU",
+			"EWIEGA46WW/moc_taskswindow.cpp",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/theorywindow.h",
+			"MU",
+			"EWIEGA46WW/moc_theorywindow.cpp",
+			null
+		],
+		[
 			"/home/icpero/Documents/3 semester/CourseWork/Client/user_rolewindow.h",
 			"MU",
 			"EWIEGA46WW/moc_user_rolewindow.cpp",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/userwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_userwindow.cpp",
 			null
 		]
 	],
@@ -392,7 +410,22 @@
 			null
 		],
 		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/taskswindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/theorywindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/icpero/Documents/3 semester/CourseWork/Client/user_rolewindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/icpero/Documents/3 semester/CourseWork/Client/userwindow.cpp",
 			"MU",
 			null
 		]

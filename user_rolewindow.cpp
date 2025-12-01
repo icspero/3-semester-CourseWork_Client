@@ -3,6 +3,8 @@
 #include "adminwindow.h"
 #include <QMessageBox>
 #include <QFile>
+#include <QFileDialog>
+#include <QTextStream>
 
 user_rolewindow::user_rolewindow(Connection *connection, QWidget *parent)
     : QDialog(parent)
@@ -38,25 +40,31 @@ void user_rolewindow::on_pushButton_clicked()
 void user_rolewindow::on_pushButton_2_clicked()
 {
     try {
-        QString filePath = ui->textEdit->toPlainText();
+        QString filePath = QFileDialog::getSaveFileName(
+            this,
+            "Сохранить файл",
+            "",
+            "Текстовые файлы (*.txt);;Все файлы (*.*)"
+            );
+
+        // Если пользователь отменил
         if (filePath.isEmpty()) {
-            QMessageBox::warning(this, "Внимание", "Пожалуйста, заполните поле!");
             return;
         }
+
         QString message = "roles_users";
         connection->sendMessage(message.toStdString());
 
         QString result = QString::fromStdString(connection->acceptMessage());
 
-        // Запись результата в файл
+        // Сохраняем в файл
         QFile file(filePath);
         if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
             QTextStream out(&file);
-            out << result; // Записываем результат в файл
-            file.close();
-            QMessageBox::information(this, "Успех", "Результат успешно записан в файл!");
+            out << result;
+            QMessageBox::information(this, "Успех", "Результат записан в файл!");
         } else {
-            QMessageBox::warning(this, "Ошибка", "Не удалось открыть или создать файл для записи!");
+            QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл!");
         }
     }
     catch (const runtime_error& error)

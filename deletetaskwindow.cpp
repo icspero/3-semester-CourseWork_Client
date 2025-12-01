@@ -1,6 +1,7 @@
 #include "deletetaskwindow.h"
 #include "ui_deletetaskwindow.h"
 #include <QMessageBox>
+#include <QtWidgets>
 #include "adminwindow.h"
 
 deletetaskwindow::deletetaskwindow(Connection *connection, QWidget *parent)
@@ -38,7 +39,7 @@ void deletetaskwindow::on_pushButton_clicked()
         }
 
         if (selectedTask != ("Для темы '" + selectedTopic + "' заданий нет!")) {
-            if (selectedTask != "Отсутствуют темы!") {
+            if (selectedTask != "Отсутствуют темы") {
                 QMessageBox::StandardButton reply;
                 reply = QMessageBox::question(this, "Удаление задания", "Вы уверены, что хотите удалить задание?", QMessageBox::Yes | QMessageBox::No);
 

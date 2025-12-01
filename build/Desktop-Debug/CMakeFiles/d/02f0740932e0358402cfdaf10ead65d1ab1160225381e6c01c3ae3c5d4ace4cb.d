@@ -35,9 +35,18 @@ Client_autogen/timestamp: \
   /home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.cpp \
   /home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.h \
   /home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.ui \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/taskswindow.cpp \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/taskswindow.h \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/taskswindow.ui \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/theorywindow.cpp \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/theorywindow.h \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/theorywindow.ui \
   /home/icpero/Documents/3\ semester/CourseWork/Client/user_rolewindow.cpp \
   /home/icpero/Documents/3\ semester/CourseWork/Client/user_rolewindow.h \
   /home/icpero/Documents/3\ semester/CourseWork/Client/user_rolewindow.ui \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/userwindow.cpp \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/userwindow.h \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/userwindow.ui \
   /usr/bin/cmake \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \

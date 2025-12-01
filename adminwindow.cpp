@@ -7,6 +7,7 @@
 #include "ui_adminwindow.h"
 #include "changerolewindow.h"
 #include "user_rolewindow.h"
+#include <QMessageBox>
 
 adminwindow::adminwindow(Connection *connection, QWidget *parent)
     : QDialog(parent)
@@ -79,9 +80,12 @@ void adminwindow::on_addTopicButton_6_clicked()
 
 void adminwindow::on_pushButton_clicked()
 {
-    this->close();
-    login window(connection);
-    window.setModal(true);
-    window.exec();
+    QMessageBox::StandardButton exitButton = QMessageBox::question(this, "Выход", "Вы уверены, что хотите выйти?", QMessageBox::Yes | QMessageBox::No);
+    if(exitButton == QMessageBox::Yes){
+        this->close();
+        login window(connection);
+        window.setModal(true);
+        window.exec();
+    }
 }
 
