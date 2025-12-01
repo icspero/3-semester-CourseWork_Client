@@ -17,15 +17,19 @@ public:
     ~user_rolewindow();
 
 private slots:
-    void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
+    void loadRolesUsers(const QString &roleFilter = QString());
+    void loadRoles();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::user_rolewindow *ui;
     Connection *connection;
+    void populateTable(const QString &data);
 };
 
 #endif // USER_ROLEWINDOW_H

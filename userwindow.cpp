@@ -3,6 +3,7 @@
 #include "loginwindow.h"
 #include "theorywindow.h"
 #include "taskswindow.h"
+#include "resultswindow.h"
 #include <QMessageBox>
 
 userwindow::userwindow(Connection *connection, QWidget *parent)
@@ -48,5 +49,14 @@ void userwindow::on_pushButton_3_clicked()
         window.setModal(true);
         window.exec();
     }
+}
+
+
+void userwindow::on_pushButton_4_clicked()
+{
+    this->close();
+    resultswindow window(connection);
+    window.setModal(true);
+    window.exec();
 }
 

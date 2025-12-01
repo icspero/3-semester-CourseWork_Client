@@ -2,6 +2,9 @@
 #include "ui_taskswindow.h"
 #include "userwindow.h"
 #include <QMessageBox>
+#include <algorithm>
+#include <QRegularExpression>
+#include <QString>
 
 taskswindow::taskswindow(Connection *connection, QWidget *parent)
     : QDialog(parent)
@@ -10,6 +13,9 @@ taskswindow::taskswindow(Connection *connection, QWidget *parent)
 {
     ui->setupUi(this);
     loadTopics();
+    for (auto button : findChildren<QPushButton*>()) {
+        button->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 taskswindow::~taskswindow()
@@ -91,18 +97,61 @@ void taskswindow::on_pushButton_6_clicked()
     window.exec();
 }
 
-
 void taskswindow::on_pushButton_4_clicked()
 {
-    /*
-    if (tasks.isEmpty()) return;
+    if (tasks.isEmpty()) {
+        QMessageBox::warning(this, "Ошибка", "Нет задания для сохранения!");
+        return;
+    }
 
-    QString answer = ui->lineEdit->text();
-    QString taskId = QString::number(currentTaskIndex); // можно использовать индекс как ID
-    connection->sendMessage("submit_answer|" + taskId + "|" + answer);
+    QString currentTaskText = tasks[currentTaskIndex];
 
-    QString serverResponse = QString::fromStdString(connection->acceptMessage());
-    QMessageBox::information(this, "Результат", serverResponse);
-    */
+    // Извлекаем task_id
+    QRegularExpression re("\\[(\\d+)\\]"); // ищем [число]
+    QRegularExpressionMatch match = re.match(currentTaskText);
+    int taskId = -1;
+
+    if (match.hasMatch()) {
+        taskId = match.captured(1).toInt();
+    } else {
+        QMessageBox::critical(this, "Ошибка", "Не удалось определить ID задания!");
+        return;
+    }
+
+    QString userAnswer = ui->lineEdit->text().trimmed();
+    if (userAnswer.isEmpty()) {
+        QMessageBox::warning(this, "Ошибка", "Вы не ввели ответ!");
+        return;
+    }
+
+    QString message = "get_task_correct_answer|" + QString::number(taskId);
+    connection->sendMessage(message.toStdString());
+    QString correctAnswerResponse = QString::fromStdString(connection->acceptMessage());
+
+    QString correctAnswer;
+    if (correctAnswerResponse.startsWith("ok|")) {
+        correctAnswer = correctAnswerResponse.split("|")[1].trimmed();
+    } else {
+        QMessageBox::warning(this, "Ошибка", "Не удалось получить верный ответ!");
+        return;
+    }
+
+    // Сравнение ответов без учета регистра и лишних пробелов
+    auto normalize = [](QString str) {
+        QString s = str.trimmed();
+        return s.toLower();
+    };
+
+    bool isCorrect = (normalize(userAnswer) == normalize(correctAnswer));
+
+    QString saveMessage = QString("save_result|%1|%2|%3|%4").arg(connection->userId).arg(taskId).arg(isCorrect ? "TRUE" : "FALSE").arg(userAnswer);
+
+    try {
+        connection->sendMessage(saveMessage.toStdString());
+        QString ignored = QString::fromStdString(connection->acceptMessage());
+        QMessageBox::information(this, "Результат", isCorrect ? "Ответ верный!" : "Ответ неверный!");
+    } catch (const std::runtime_error &e) {
+        QMessageBox::critical(this, "Ошибка", e.what());
+    }
 }
 

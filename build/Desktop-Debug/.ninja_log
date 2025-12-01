@@ -1,61 +1,63 @@
 # ninja log v5
-3471	5773	1764595041048450326	CMakeFiles/Client.dir/registerwindow.cpp.o	90428dc50c03139d
-50	3471	1764595038743260532	CMakeFiles/Client.dir/loginwindow.cpp.o	90b1501c3a8576ea
-51	4313	1764595039586330036	CMakeFiles/Client.dir/deletetopicwindow.cpp.o	563c7f40dac7a3d7
-255	5008	1764594950688804860	CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o	d5830c56d73c3e3
-5	49	1764595035325977615	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/mocs_compilation.cpp	667016a275cae180
-509	3126	1764270640406824911	CMakeFiles/Client.dir/connection.cpp.o	8ca309d55071f62c
-47	2002	1764263444479748399	CMakeFiles/Client.dir/login.cpp.o	eba349c20fa565d
-5	49	1764595035325977615	Client_autogen/timestamp	667016a275cae180
-5	49	1764595035325977615	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/timestamp	667016a275cae180
-52	6897	1764595042169542305	CMakeFiles/Client.dir/deletetaskwindow.cpp.o	660031bdeb2ce603
-50	2988	1764595038263220903	CMakeFiles/Client.dir/mainwindow.cpp.o	21a9101deaa95feb
-51	4077	1764595039347310342	CMakeFiles/Client.dir/addtaskwindow.cpp.o	5f6c565b391a9eca
-5	49	1764595035325977615	Client_autogen/mocs_compilation.cpp	667016a275cae180
-3790	6031	1764595041306471501	CMakeFiles/Client.dir/theorywindow.cpp.o	3d8f99592febba87
-2989	5582	1764595040856434543	CMakeFiles/Client.dir/user_rolewindow.cpp.o	c66216b4bc16212b
+5102	7396	1764624353979304434	CMakeFiles/Client.dir/registerwindow.cpp.o	90428dc50c03139d
+6204	8795	1764624355382308316	CMakeFiles/Client.dir/resultswindow.cpp.o	36855c81d1348ce2
+5973	8439	1764624355026307333	CMakeFiles/Client.dir/taskswindow.cpp.o	1416c2c8286b8330
+92	6368	1764624352951301580	CMakeFiles/Client.dir/changerolewindow.cpp.o	2833a5a054223daa
+10395	10890	1764624357472314078	Client	9c04c1f4ef6e4186
+89	4558	1764624351075296359	CMakeFiles/Client.dir/addtopicwindow.cpp.o	563ac8cda40c8c7
 56	4405	1764359511643279623	CMakeFiles/Client.dir/changerole.cpp.o	3e17760a8e93c46f
 245	1831	1764258054273328665	CMakeFiles/Client.dir/secondwindow.cpp.o	c75c6803458757ad
-4077	6186	1764595041460484140	CMakeFiles/Client.dir/taskswindow.cpp.o	1416c2c8286b8330
-53	4114	1764595039388313720	CMakeFiles/Client.dir/changerolewindow.cpp.o	2833a5a054223daa
-6897	7483	1764595042751589981	Client	736857cd237113e0
-51	3550	1764595038824267219	CMakeFiles/Client.dir/addtopicwindow.cpp.o	563ac8cda40c8c7
-262	3749	1764530408842537244	CMakeFiles/Client.dir/main.cpp.o	1c7bd4ec0c1c1ce8
-3550	5599	1764595040872435858	CMakeFiles/Client.dir/userwindow.cpp.o	6f31f367bb36c7e6
-51	3790	1764595039064287023	CMakeFiles/Client.dir/adminwindow.cpp.o	244e4ab36d87d7d0
-9	265	1764595329803581963	Client_autogen/timestamp	667016a275cae180
-9	265	1764595329803581963	Client_autogen/mocs_compilation.cpp	667016a275cae180
-9	265	1764595329803581963	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/timestamp	667016a275cae180
-9	265	1764595329803581963	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/mocs_compilation.cpp	667016a275cae180
-266	3143	1764595332689716516	CMakeFiles/Client.dir/deletetopicwindow.cpp.o	563c7f40dac7a3d7
-265	3387	1764595332932727818	CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o	d5830c56d73c3e3
-266	3720	1764595333263743191	CMakeFiles/Client.dir/addtaskwindow.cpp.o	5f6c565b391a9eca
-266	3820	1764595333364747879	CMakeFiles/Client.dir/adminwindow.cpp.o	244e4ab36d87d7d0
-265	3891	1764595333435751175	CMakeFiles/Client.dir/mainwindow.cpp.o	21a9101deaa95feb
-265	4269	1764595333803768258	CMakeFiles/Client.dir/loginwindow.cpp.o	90b1501c3a8576ea
-266	4353	1764595333891772343	CMakeFiles/Client.dir/addtopicwindow.cpp.o	563ac8cda40c8c7
-3144	6177	1764595335721857069	CMakeFiles/Client.dir/changerolewindow.cpp.o	2833a5a054223daa
-3821	6370	1764595335915866039	CMakeFiles/Client.dir/userwindow.cpp.o	6f31f367bb36c7e6
-3721	6471	1764595336016870709	CMakeFiles/Client.dir/registerwindow.cpp.o	90428dc50c03139d
-3387	6535	1764595336080873663	CMakeFiles/Client.dir/user_rolewindow.cpp.o	c66216b4bc16212b
-3891	6551	1764595336096874401	CMakeFiles/Client.dir/theorywindow.cpp.o	3d8f99592febba87
-4269	6798	1764595336343885800	CMakeFiles/Client.dir/taskswindow.cpp.o	1416c2c8286b8330
-267	7775	1764595337320930860	CMakeFiles/Client.dir/deletetaskwindow.cpp.o	660031bdeb2ce603
-7	57	1764595388247164434	Client_autogen/timestamp	667016a275cae180
-7	57	1764595388247164434	Client_autogen/mocs_compilation.cpp	667016a275cae180
-7	57	1764595388247164434	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/timestamp	667016a275cae180
-7	57	1764595388247164434	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/mocs_compilation.cpp	667016a275cae180
-59	2397	1764595390585261751	CMakeFiles/Client.dir/deletetopicwindow.cpp.o	563c7f40dac7a3d7
-59	2410	1764595390596262208	CMakeFiles/Client.dir/mainwindow.cpp.o	21a9101deaa95feb
-59	2413	1764595390594262125	CMakeFiles/Client.dir/adminwindow.cpp.o	244e4ab36d87d7d0
-59	2431	1764595390618263122	CMakeFiles/Client.dir/loginwindow.cpp.o	90b1501c3a8576ea
-59	2969	1764595391154285373	CMakeFiles/Client.dir/addtopicwindow.cpp.o	563ac8cda40c8c7
-60	3420	1764595391603303986	CMakeFiles/Client.dir/addtaskwindow.cpp.o	5f6c565b391a9eca
-62	3877	1764595392059322884	CMakeFiles/Client.dir/changerolewindow.cpp.o	2833a5a054223daa
-2413	4213	1764595392401337033	CMakeFiles/Client.dir/userwindow.cpp.o	6f31f367bb36c7e6
-2431	4723	1764595392910358092	CMakeFiles/Client.dir/theorywindow.cpp.o	3d8f99592febba87
-2410	4801	1764595392988361319	CMakeFiles/Client.dir/registerwindow.cpp.o	90428dc50c03139d
-2398	4966	1764595393154368175	CMakeFiles/Client.dir/user_rolewindow.cpp.o	c66216b4bc16212b
-2969	5056	1764595393243371850	CMakeFiles/Client.dir/taskswindow.cpp.o	1416c2c8286b8330
-61	6296	1764595394481422933	CMakeFiles/Client.dir/deletetaskwindow.cpp.o	660031bdeb2ce603
-6296	6844	1764595395026445392	Client	736857cd237113e0
+1440	5770	1764615816404990389	CMakeFiles/Client.dir/main.cpp.o	1c7bd4ec0c1c1ce8
+5338	7976	1764624354563306051	CMakeFiles/Client.dir/userwindow.cpp.o	6f31f367bb36c7e6
+297	2780	1764624189447764705	CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o	d5830c56d73c3e3
+88	5865	1764624352447300179	CMakeFiles/Client.dir/loginwindow.cpp.o	90b1501c3a8576ea
+89	6203	1764624352781301107	CMakeFiles/Client.dir/deletetopicwindow.cpp.o	563c7f40dac7a3d7
+28	86	1764624346675284043	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/timestamp	667016a275cae180
+28	86	1764624346675284043	Client_autogen/timestamp	667016a275cae180
+47	2002	1764263444479748399	CMakeFiles/Client.dir/login.cpp.o	eba349c20fa565d
+1440	4561	1764615815191987365	CMakeFiles/Client.dir/connection.cpp.o	8ca309d55071f62c
+90	5972	1764624352554300477	CMakeFiles/Client.dir/addtaskwindow.cpp.o	5f6c565b391a9eca
+88	5102	1764624351686298061	CMakeFiles/Client.dir/mainwindow.cpp.o	21a9101deaa95feb
+90	10395	1764624356979312722	CMakeFiles/Client.dir/deletetaskwindow.cpp.o	660031bdeb2ce603
+5865	8149	1764624354737306533	CMakeFiles/Client.dir/theorywindow.cpp.o	3d8f99592febba87
+28	86	1764624346675284043	Client_autogen/mocs_compilation.cpp	667016a275cae180
+4562	7819	1764624354403305608	CMakeFiles/Client.dir/user_rolewindow.cpp.o	c66216b4bc16212b
+28	86	1764624346675284043	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/mocs_compilation.cpp	667016a275cae180
+89	5338	1764624351914298696	CMakeFiles/Client.dir/adminwindow.cpp.o	244e4ab36d87d7d0
+12	311	1764624805390797905	Client_autogen/timestamp	667016a275cae180
+12	311	1764624805390797905	Client_autogen/mocs_compilation.cpp	667016a275cae180
+12	311	1764624805390797905	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/timestamp	667016a275cae180
+12	311	1764624805390797905	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/mocs_compilation.cpp	667016a275cae180
+312	3804	1764624808882004092	CMakeFiles/Client.dir/addtopicwindow.cpp.o	563ac8cda40c8c7
+312	3834	1764624808916006095	CMakeFiles/Client.dir/adminwindow.cpp.o	244e4ab36d87d7d0
+311	3880	1764624808968009158	CMakeFiles/Client.dir/loginwindow.cpp.o	90b1501c3a8576ea
+313	4046	1764624809135018979	CMakeFiles/Client.dir/deletetopicwindow.cpp.o	563c7f40dac7a3d7
+311	4190	1764624809278027385	CMakeFiles/Client.dir/mainwindow.cpp.o	21a9101deaa95feb
+314	4610	1764624809696051958	CMakeFiles/Client.dir/addtaskwindow.cpp.o	5f6c565b391a9eca
+311	4728	1764624809809058600	CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.o	d5830c56d73c3e3
+4046	7074	1764624812162196529	CMakeFiles/Client.dir/userwindow.cpp.o	6f31f367bb36c7e6
+3807	7138	1764624812226200269	CMakeFiles/Client.dir/changerolewindow.cpp.o	2833a5a054223daa
+3881	7219	1764624812308205061	CMakeFiles/Client.dir/registerwindow.cpp.o	90428dc50c03139d
+4190	7742	1764624812830235568	CMakeFiles/Client.dir/theorywindow.cpp.o	3d8f99592febba87
+4613	7810	1764624812899239601	CMakeFiles/Client.dir/taskswindow.cpp.o	1416c2c8286b8330
+4728	8171	1764624813260260668	CMakeFiles/Client.dir/resultswindow.cpp.o	36855c81d1348ce2
+314	8744	1764624813824293566	CMakeFiles/Client.dir/deletetaskwindow.cpp.o	660031bdeb2ce603
+19	68	1764624834587479542	Client_autogen/timestamp	667016a275cae180
+19	68	1764624834587479542	Client_autogen/mocs_compilation.cpp	667016a275cae180
+19	68	1764624834587479542	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/timestamp	667016a275cae180
+19	68	1764624834587479542	/home/icpero/Documents/3 semester/CourseWork/Client/build/Desktop-Debug/Client_autogen/mocs_compilation.cpp	667016a275cae180
+70	2226	1764624836741599849	CMakeFiles/Client.dir/deletetopicwindow.cpp.o	563c7f40dac7a3d7
+69	2549	1764624837064617853	CMakeFiles/Client.dir/mainwindow.cpp.o	21a9101deaa95feb
+70	2580	1764624837089619244	CMakeFiles/Client.dir/adminwindow.cpp.o	244e4ab36d87d7d0
+70	2914	1764624837424637888	CMakeFiles/Client.dir/loginwindow.cpp.o	90b1501c3a8576ea
+70	3148	1764624837659650966	CMakeFiles/Client.dir/addtopicwindow.cpp.o	563ac8cda40c8c7
+71	3783	1764624838292686161	CMakeFiles/Client.dir/changerolewindow.cpp.o	2833a5a054223daa
+71	3789	1764624838305686884	CMakeFiles/Client.dir/addtaskwindow.cpp.o	5f6c565b391a9eca
+2549	5119	1764624839636760742	CMakeFiles/Client.dir/registerwindow.cpp.o	90428dc50c03139d
+2226	5184	1764624839701764345	CMakeFiles/Client.dir/user_rolewindow.cpp.o	c66216b4bc16212b
+2580	5343	1764624839860773159	CMakeFiles/Client.dir/userwindow.cpp.o	6f31f367bb36c7e6
+2914	5617	1764624840134788333	CMakeFiles/Client.dir/theorywindow.cpp.o	3d8f99592febba87
+3148	5679	1764624840196791763	CMakeFiles/Client.dir/taskswindow.cpp.o	1416c2c8286b8330
+3783	6572	1764624841090841213	CMakeFiles/Client.dir/resultswindow.cpp.o	36855c81d1348ce2
+71	6929	1764624841446860871	CMakeFiles/Client.dir/deletetaskwindow.cpp.o	660031bdeb2ce603
+6929	7482	1764624841993325428	Client	9c04c1f4ef6e4186

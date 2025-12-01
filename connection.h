@@ -17,6 +17,7 @@ public:
     ~Connection();
     void sendMessage(const string& message);
     string acceptMessage() ;
+    int userId = -1;
 private:
     SocketRAII client_socket;
 };

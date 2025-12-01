@@ -53,8 +53,8 @@ void deletetaskwindow::on_pushButton_clicked()
 
                     QMessageBox::information(this, "Ответ сервера", serverResponse);
 
-                    int index = ui->comboBox->currentIndex();
-                    ui->comboBox->removeItem(index);
+                    int index = ui->comboBox_2->currentIndex();
+                    ui->comboBox_2->removeItem(index);
                 }
             }
         }

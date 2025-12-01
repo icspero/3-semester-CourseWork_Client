@@ -27,6 +27,15 @@ void login::on_loginButton_clicked()
     QString login = ui->loginEdit->text();
     QString password = ui->passwordEdit->text();
 
+    connection->sendMessage("get_user_id|" + login.toStdString());
+    QString resp = QString::fromStdString(connection->acceptMessage());
+    if (resp.startsWith("ok|")) {
+        int uid = resp.split("|")[1].toInt();
+        connection->userId = uid;
+    } else {
+        QMessageBox::warning(this, "Ошибка", "Не удалось получить user_id!");
+    }
+
     if (login.isEmpty() || password.isEmpty()) {
         QMessageBox::warning(this, "Внимание", "Пожалуйста, заполните все поля!");
         return;

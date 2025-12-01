@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "connection.h"
 
+
 namespace Ui {
 class taskswindow;
 }

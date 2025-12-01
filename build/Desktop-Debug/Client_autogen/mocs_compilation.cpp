@@ -8,6 +8,7 @@
 #include "EWIEGA46WW/moc_loginwindow.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_registerwindow.cpp"
+#include "EWIEGA46WW/moc_resultswindow.cpp"
 #include "EWIEGA46WW/moc_taskswindow.cpp"
 #include "EWIEGA46WW/moc_theorywindow.cpp"
 #include "EWIEGA46WW/moc_user_rolewindow.cpp"
