@@ -15,51 +15,130 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_theorywindow
 {
 public:
-    QComboBox *comboBox;
-    QTextEdit *textEdit;
-    QTextEdit *textEdit_2;
+    QVBoxLayout *verticalLayout;
+    QSpacerItem *verticalSpacer_2;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_2;
     QLabel *label;
-    QLabel *label_2;
-    QLabel *label_3;
-    QPushButton *pushButton;
+    QComboBox *comboBox;
     QPushButton *pushButton_2;
+    QSpacerItem *verticalSpacer_3;
+    QWidget *widget_2;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *label_2;
+    QTextEdit *textEdit;
+    QLabel *label_3;
+    QTextEdit *textEdit_2;
+    QPushButton *pushButton;
+    QSpacerItem *verticalSpacer;
 
     void setupUi(QDialog *theorywindow)
     {
         if (theorywindow->objectName().isEmpty())
             theorywindow->setObjectName("theorywindow");
         theorywindow->resize(800, 600);
-        comboBox = new QComboBox(theorywindow);
-        comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(220, 40, 321, 31));
-        textEdit = new QTextEdit(theorywindow);
-        textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(80, 150, 621, 61));
-        textEdit_2 = new QTextEdit(theorywindow);
-        textEdit_2->setObjectName("textEdit_2");
-        textEdit_2->setGeometry(QRect(50, 260, 681, 261));
-        label = new QLabel(theorywindow);
+        verticalLayout = new QVBoxLayout(theorywindow);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer_2);
+
+        widget = new QWidget(theorywindow);
+        widget->setObjectName("widget");
+        verticalLayout_2 = new QVBoxLayout(widget);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        label = new QLabel(widget);
         label->setObjectName("label");
-        label->setGeometry(QRect(320, 20, 141, 18));
-        label_2 = new QLabel(theorywindow);
+
+        verticalLayout_2->addWidget(label, 0, Qt::AlignHCenter);
+
+        comboBox = new QComboBox(widget);
+        comboBox->setObjectName("comboBox");
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
+        comboBox->setSizePolicy(sizePolicy);
+        comboBox->setMinimumSize(QSize(250, 30));
+
+        verticalLayout_2->addWidget(comboBox, 0, Qt::AlignHCenter);
+
+        pushButton_2 = new QPushButton(widget);
+        pushButton_2->setObjectName("pushButton_2");
+        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
+        pushButton_2->setSizePolicy(sizePolicy);
+        pushButton_2->setMinimumSize(QSize(125, 30));
+
+        verticalLayout_2->addWidget(pushButton_2, 0, Qt::AlignHCenter);
+
+        verticalSpacer_3 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_3);
+
+        widget_2 = new QWidget(widget);
+        widget_2->setObjectName("widget_2");
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy1);
+        widget_2->setMinimumSize(QSize(0, 80));
+        verticalLayout_3 = new QVBoxLayout(widget_2);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        label_2 = new QLabel(widget_2);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(340, 130, 121, 18));
-        label_3 = new QLabel(theorywindow);
+
+        verticalLayout_3->addWidget(label_2, 0, Qt::AlignHCenter);
+
+        textEdit = new QTextEdit(widget_2);
+        textEdit->setObjectName("textEdit");
+        sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
+        textEdit->setSizePolicy(sizePolicy);
+        textEdit->setMinimumSize(QSize(500, 50));
+
+        verticalLayout_3->addWidget(textEdit, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+
+        verticalLayout_2->addWidget(widget_2, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+        label_3 = new QLabel(widget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(350, 230, 66, 18));
+
+        verticalLayout_2->addWidget(label_3, 0, Qt::AlignHCenter);
+
+        textEdit_2 = new QTextEdit(widget);
+        textEdit_2->setObjectName("textEdit_2");
+        sizePolicy.setHeightForWidth(textEdit_2->sizePolicy().hasHeightForWidth());
+        textEdit_2->setSizePolicy(sizePolicy);
+        textEdit_2->setMinimumSize(QSize(500, 175));
+
+        verticalLayout_2->addWidget(textEdit_2, 0, Qt::AlignHCenter);
+
+
+        verticalLayout->addWidget(widget, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
         pushButton = new QPushButton(theorywindow);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(310, 540, 141, 31));
-        pushButton_2 = new QPushButton(theorywindow);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(290, 90, 181, 31));
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
+        pushButton->setMinimumSize(QSize(200, 50));
+
+        verticalLayout->addWidget(pushButton, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+        verticalSpacer = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer);
+
 
         retranslateUi(theorywindow);
 
@@ -68,12 +147,12 @@ public:
 
     void retranslateUi(QDialog *theorywindow)
     {
-        theorywindow->setWindowTitle(QCoreApplication::translate("theorywindow", "Dialog", nullptr));
+        theorywindow->setWindowTitle(QCoreApplication::translate("theorywindow", "\320\242\320\265\320\276\321\200\320\270\321\217", nullptr));
         label->setText(QCoreApplication::translate("theorywindow", "\320\222\321\213\320\261\320\265\321\200\320\270\321\202\320\265 \321\202\320\265\320\274\321\203", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("theorywindow", "\320\237\320\276\320\264\321\200\320\276\320\261\320\275\320\265\320\265", nullptr));
         label_2->setText(QCoreApplication::translate("theorywindow", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
         label_3->setText(QCoreApplication::translate("theorywindow", "\320\242\320\265\320\276\321\200\320\270\321\217", nullptr));
         pushButton->setText(QCoreApplication::translate("theorywindow", "\320\223\320\273\320\260\320\262\320\275\320\276\320\265 \320\274\320\265\320\275\321\216", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("theorywindow", "\320\237\320\276\320\264\321\200\320\276\320\261\320\275\320\265\320\265", nullptr));
     } // retranslateUi
 
 };

@@ -50,7 +50,6 @@ void adminwindow::on_addTopicButton_3_clicked()
     window.exec();
 }
 
-
 void adminwindow::on_addTopicButton_4_clicked()
 {
     this->close();

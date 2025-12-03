@@ -13,31 +13,95 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_deletetopicwindow
 {
 public:
+    QVBoxLayout *verticalLayout;
+    QSpacerItem *verticalSpacer;
+    QWidget *widget_2;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *label;
     QComboBox *comboBox;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_2;
     QPushButton *pushButton;
+    QSpacerItem *verticalSpacer_3;
     QPushButton *pushButton_2;
+    QSpacerItem *verticalSpacer_2;
 
     void setupUi(QDialog *deletetopicwindow)
     {
         if (deletetopicwindow->objectName().isEmpty())
             deletetopicwindow->setObjectName("deletetopicwindow");
-        deletetopicwindow->resize(683, 509);
-        comboBox = new QComboBox(deletetopicwindow);
+        deletetopicwindow->resize(800, 600);
+        verticalLayout = new QVBoxLayout(deletetopicwindow);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalSpacer = new QSpacerItem(20, 150, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer);
+
+        widget_2 = new QWidget(deletetopicwindow);
+        widget_2->setObjectName("widget_2");
+        verticalLayout_3 = new QVBoxLayout(widget_2);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        label = new QLabel(widget_2);
+        label->setObjectName("label");
+
+        verticalLayout_3->addWidget(label, 0, Qt::AlignHCenter);
+
+        comboBox = new QComboBox(widget_2);
         comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(180, 210, 321, 31));
-        pushButton = new QPushButton(deletetopicwindow);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
+        comboBox->setSizePolicy(sizePolicy);
+        comboBox->setMinimumSize(QSize(250, 30));
+
+        verticalLayout_3->addWidget(comboBox);
+
+
+        verticalLayout->addWidget(widget_2, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+        widget = new QWidget(deletetopicwindow);
+        widget->setObjectName("widget");
+        verticalLayout_2 = new QVBoxLayout(widget);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        pushButton = new QPushButton(widget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(280, 260, 111, 31));
-        pushButton_2 = new QPushButton(deletetopicwindow);
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
+        pushButton->setMinimumSize(QSize(200, 50));
+
+        verticalLayout_2->addWidget(pushButton);
+
+        verticalSpacer_3 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_3);
+
+        pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(240, 310, 191, 31));
+        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
+        pushButton_2->setSizePolicy(sizePolicy);
+        pushButton_2->setMinimumSize(QSize(200, 50));
+
+        verticalLayout_2->addWidget(pushButton_2);
+
+
+        verticalLayout->addWidget(widget, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+        verticalSpacer_2 = new QSpacerItem(20, 150, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout->addItem(verticalSpacer_2);
+
 
         retranslateUi(deletetopicwindow);
 
@@ -46,7 +110,8 @@ public:
 
     void retranslateUi(QDialog *deletetopicwindow)
     {
-        deletetopicwindow->setWindowTitle(QCoreApplication::translate("deletetopicwindow", "Dialog", nullptr));
+        deletetopicwindow->setWindowTitle(QCoreApplication::translate("deletetopicwindow", "\320\243\320\264\320\260\320\273\320\265\320\275\320\270\320\265 \321\202\320\265\320\274\321\213", nullptr));
+        label->setText(QCoreApplication::translate("deletetopicwindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
         pushButton->setText(QCoreApplication::translate("deletetopicwindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
         pushButton_2->setText(QCoreApplication::translate("deletetopicwindow", "\320\223\320\273\320\260\320\262\320\275\320\276\320\265 \320\274\320\265\320\275\321\216", nullptr));
     } // retranslateUi

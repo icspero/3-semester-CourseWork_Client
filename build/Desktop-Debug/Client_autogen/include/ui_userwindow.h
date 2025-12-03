@@ -13,34 +13,87 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_userwindow
 {
 public:
+    QVBoxLayout *verticalLayout;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_2;
     QPushButton *pushButton;
+    QSpacerItem *verticalSpacer;
     QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QSpacerItem *verticalSpacer_2;
     QPushButton *pushButton_4;
+    QSpacerItem *verticalSpacer_3;
+    QPushButton *pushButton_3;
 
     void setupUi(QDialog *userwindow)
     {
         if (userwindow->objectName().isEmpty())
             userwindow->setObjectName("userwindow");
-        userwindow->resize(593, 481);
-        pushButton = new QPushButton(userwindow);
+        userwindow->resize(800, 600);
+        verticalLayout = new QVBoxLayout(userwindow);
+        verticalLayout->setObjectName("verticalLayout");
+        widget = new QWidget(userwindow);
+        widget->setObjectName("widget");
+        verticalLayout_2 = new QVBoxLayout(widget);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        pushButton = new QPushButton(widget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(180, 160, 221, 51));
-        pushButton_2 = new QPushButton(userwindow);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
+        pushButton->setMinimumSize(QSize(200, 50));
+
+        verticalLayout_2->addWidget(pushButton);
+
+        verticalSpacer = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer);
+
+        pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(180, 230, 221, 51));
-        pushButton_3 = new QPushButton(userwindow);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(210, 380, 161, 41));
-        pushButton_4 = new QPushButton(userwindow);
+        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
+        pushButton_2->setSizePolicy(sizePolicy);
+        pushButton_2->setMinimumSize(QSize(200, 50));
+
+        verticalLayout_2->addWidget(pushButton_2);
+
+        verticalSpacer_2 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_2);
+
+        pushButton_4 = new QPushButton(widget);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(180, 300, 221, 51));
+        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
+        pushButton_4->setSizePolicy(sizePolicy);
+        pushButton_4->setMinimumSize(QSize(200, 50));
+
+        verticalLayout_2->addWidget(pushButton_4);
+
+        verticalSpacer_3 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_3);
+
+        pushButton_3 = new QPushButton(widget);
+        pushButton_3->setObjectName("pushButton_3");
+        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy);
+        pushButton_3->setMinimumSize(QSize(200, 50));
+
+        verticalLayout_2->addWidget(pushButton_3);
+
+
+        verticalLayout->addWidget(widget, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
 
         retranslateUi(userwindow);
 
@@ -49,11 +102,11 @@ public:
 
     void retranslateUi(QDialog *userwindow)
     {
-        userwindow->setWindowTitle(QCoreApplication::translate("userwindow", "Dialog", nullptr));
+        userwindow->setWindowTitle(QCoreApplication::translate("userwindow", "\320\234\320\265\320\275\321\216 \320\277\320\276\321\201\320\265\321\202\320\270\321\202\320\265\320\273\321\217", nullptr));
         pushButton->setText(QCoreApplication::translate("userwindow", "\320\242\320\265\320\276\321\200\320\270\321\217", nullptr));
         pushButton_2->setText(QCoreApplication::translate("userwindow", "\320\227\320\260\320\264\320\260\320\275\320\270\321\217", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("userwindow", "\320\222\321\213\320\271\321\202\320\270", nullptr));
         pushButton_4->setText(QCoreApplication::translate("userwindow", "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202\321\213", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("userwindow", "\320\222\321\213\320\271\321\202\320\270", nullptr));
     } // retranslateUi
 
 };
