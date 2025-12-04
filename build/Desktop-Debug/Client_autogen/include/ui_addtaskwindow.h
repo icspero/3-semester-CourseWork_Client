@@ -111,6 +111,12 @@ public:
 
         widget_3 = new QWidget(widget);
         widget_3->setObjectName("widget_3");
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(widget_3->sizePolicy().hasHeightForWidth());
+        widget_3->setSizePolicy(sizePolicy2);
+        widget_3->setMinimumSize(QSize(80, 0));
         verticalLayout_5 = new QVBoxLayout(widget_3);
         verticalLayout_5->setObjectName("verticalLayout_5");
         label_3 = new QLabel(widget_3);
@@ -125,7 +131,7 @@ public:
         textEdit_2->setEnabled(true);
         sizePolicy1.setHeightForWidth(textEdit_2->sizePolicy().hasHeightForWidth());
         textEdit_2->setSizePolicy(sizePolicy1);
-        textEdit_2->setMinimumSize(QSize(50, 20));
+        textEdit_2->setMinimumSize(QSize(300, 25));
         QFont font;
         font.setBold(false);
         textEdit_2->setFont(font);
@@ -165,7 +171,7 @@ public:
 
         verticalLayout->addWidget(widget_2, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
-        verticalSpacer_2 = new QSpacerItem(20, 15, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer_2);
 

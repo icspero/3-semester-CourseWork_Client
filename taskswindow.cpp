@@ -16,6 +16,7 @@ taskswindow::taskswindow(Connection *connection, QWidget *parent)
     for (auto button : findChildren<QPushButton*>()) {
         button->setFocusPolicy(Qt::NoFocus);
     }
+    ui->textEdit->setReadOnly(true);
 }
 
 taskswindow::~taskswindow()
@@ -150,6 +151,7 @@ void taskswindow::on_pushButton_4_clicked()
         connection->sendMessage(saveMessage.toStdString());
         QString ignored = QString::fromStdString(connection->acceptMessage());
         QMessageBox::information(this, "Результат", isCorrect ? "Ответ верный!" : "Ответ неверный!");
+        ui->lineEdit->clear();
     } catch (const std::runtime_error &e) {
         QMessageBox::critical(this, "Ошибка", e.what());
     }

@@ -13,8 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     for (auto button : findChildren<QPushButton*>()) {
         button->setFocusPolicy(Qt::NoFocus);
     }
-
-    move(500, 500);
 }
 
 MainWindow::~MainWindow()

@@ -30,14 +30,13 @@ void deletetaskwindow::on_pushButton_clicked()
             return;
         }
 
-        loadTasks(selectedTopic);
         QString selectedTask = ui->comboBox_2->currentText();
+        int selectedIndex = ui->comboBox_2->currentIndex();
 
         if (selectedTask.isEmpty()) {
             QMessageBox::warning(this, "Ошибка", "Вы не выбрали задание!");
             return;
         }
-
         if (selectedTask != ("Для темы '" + selectedTopic + "' заданий нет!")) {
             if (selectedTask != "Отсутствуют темы") {
                 QMessageBox::StandardButton reply;
@@ -53,8 +52,7 @@ void deletetaskwindow::on_pushButton_clicked()
 
                     QMessageBox::information(this, "Ответ сервера", serverResponse);
 
-                    int index = ui->comboBox_2->currentIndex();
-                    ui->comboBox_2->removeItem(index);
+                    ui->comboBox_2->removeItem(selectedIndex);
                 }
             }
         }

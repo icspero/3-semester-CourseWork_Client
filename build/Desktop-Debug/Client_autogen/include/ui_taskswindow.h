@@ -141,7 +141,7 @@ public:
         lineEdit->setObjectName("lineEdit");
         sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
         lineEdit->setSizePolicy(sizePolicy);
-        lineEdit->setMinimumSize(QSize(200, 30));
+        lineEdit->setMinimumSize(QSize(300, 30));
 
         horizontalLayout_2->addWidget(lineEdit);
 

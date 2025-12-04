@@ -115,6 +115,18 @@
       </item>
       <item alignment="Qt::AlignHCenter">
        <widget class="QWidget" name="widget_3" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
          <item alignment="Qt::AlignHCenter">
           <widget class="QLabel" name="label_3">
@@ -142,8 +154,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>50</width>
-             <height>20</height>
+             <width>300</width>
+             <height>25</height>
             </size>
            </property>
            <property name="font">
@@ -230,7 +242,7 @@
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>15</height>
+       <height>20</height>
       </size>
      </property>
     </spacer>
