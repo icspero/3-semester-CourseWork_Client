@@ -1,6 +1,7 @@
 #include "theorywindow.h"
 #include "ui_theorywindow.h"
 #include "userwindow.h"
+#include "adminwindow.h"
 #include <QMessageBox>
 
 theorywindow::theorywindow(Connection *connection, QWidget *parent)
@@ -13,6 +14,9 @@ theorywindow::theorywindow(Connection *connection, QWidget *parent)
     for (auto button : findChildren<QPushButton*>()) {
         button->setFocusPolicy(Qt::NoFocus);
     }
+
+    ui->textEdit->setReadOnly(true);
+    ui->textEdit_2->setReadOnly(true);
 }
 
 theorywindow::~theorywindow()
@@ -22,12 +26,22 @@ theorywindow::~theorywindow()
 
 void theorywindow::on_pushButton_clicked()
 {
-    this->close();
-    userwindow window(connection);
-    window.setModal(true);
-    window.exec();
-}
+    connection->sendMessage("get_role|" + to_string(connection->userId));
 
+    QString result = QString::fromStdString(connection->acceptMessage());
+    if (result.contains("Администратор")) {
+        this->close();
+        adminwindow window(connection);
+        window.setModal(true);
+        window.exec();
+    }
+    if (result.contains("Посетитель")) {
+        this->close();
+        userwindow window(connection);
+        window.setModal(true);
+        window.exec();
+    }
+}
 
 void theorywindow::on_pushButton_2_clicked()
 {

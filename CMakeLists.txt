@@ -39,6 +39,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         theorywindow.h theorywindow.cpp theorywindow.ui
         taskswindow.h taskswindow.cpp taskswindow.ui
         resultswindow.h resultswindow.cpp resultswindow.ui
+        resultsadminwindow.h resultsadminwindow.cpp resultsadminwindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Client APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

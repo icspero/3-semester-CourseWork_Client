@@ -7,6 +7,9 @@
 #include "ui_adminwindow.h"
 #include "changerolewindow.h"
 #include "user_rolewindow.h"
+#include "taskswindow.h"
+#include "theorywindow.h"
+#include "resultsadminwindow.h"
 #include <QMessageBox>
 
 adminwindow::adminwindow(Connection *connection, QWidget *parent)
@@ -86,5 +89,31 @@ void adminwindow::on_pushButton_clicked()
         window.setModal(true);
         window.exec();
     }
+}
+
+void adminwindow::on_pushButton_2_clicked()
+{
+    this->close();
+    theorywindow window(connection);
+    window.setModal(true);
+    window.exec();
+}
+
+
+void adminwindow::on_pushButton_3_clicked()
+{
+    this->close();
+    taskswindow window(connection);
+    window.setModal(true);
+    window.exec();
+}
+
+
+void adminwindow::on_pushButton_4_clicked()
+{
+    this->close();
+    resultsadminwindow window(connection);
+    window.setModal(true);
+    window.exec();
 }
 

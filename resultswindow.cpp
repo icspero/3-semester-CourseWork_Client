@@ -110,10 +110,7 @@ void resultswindow::on_pushButton_2_clicked()
 
 void resultswindow::on_pushButton_3_clicked()
 {
-    QString fileName = QFileDialog::getSaveFileName(this,
-                                                    "Сохранить результаты",
-                                                    "",
-                                                    "CSV files (*.csv);;All Files (*)");
+    QString fileName = QFileDialog::getSaveFileName(this, "Сохранить результаты", "", "CSV files (*.csv);;All Files (*)");
 
     if (fileName.isEmpty())
         return;

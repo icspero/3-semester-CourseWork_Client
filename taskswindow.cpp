@@ -1,6 +1,7 @@
 #include "taskswindow.h"
 #include "ui_taskswindow.h"
 #include "userwindow.h"
+#include "adminwindow.h"
 #include <QMessageBox>
 #include <algorithm>
 #include <QRegularExpression>
@@ -92,10 +93,21 @@ void taskswindow::on_pushButton_2_clicked()
 
 void taskswindow::on_pushButton_6_clicked()
 {
-    this->close();
-    userwindow window(connection);
-    window.setModal(true);
-    window.exec();
+    connection->sendMessage("get_role|" + to_string(connection->userId));
+
+    QString result = QString::fromStdString(connection->acceptMessage());
+    if (result.contains("Администратор")) {
+        this->close();
+        adminwindow window(connection);
+        window.setModal(true);
+        window.exec();
+    }
+    if (result.contains("Посетитель")) {
+        this->close();
+        userwindow window(connection);
+        window.setModal(true);
+        window.exec();
+    }
 }
 
 void taskswindow::on_pushButton_4_clicked()

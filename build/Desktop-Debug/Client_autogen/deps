@@ -26,6 +26,8 @@ Client_autogen/timestamp: \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/mainwindow.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.cpp \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.h \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/resultsadminwindow.cpp \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/resultsadminwindow.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/resultswindow.cpp \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/resultswindow.h \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/taskswindow.cpp \
@@ -621,6 +623,7 @@ Client_autogen/timestamp: \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/loginwindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/mainwindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.ui \
+	/home/icpero/Documents/3\ semester/CourseWork/Client/resultsadminwindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/resultswindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/taskswindow.ui \
 	/home/icpero/Documents/3\ semester/CourseWork/Client/theorywindow.ui \

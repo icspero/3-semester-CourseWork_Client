@@ -35,6 +35,9 @@ Client_autogen/timestamp: \
   /home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.cpp \
   /home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.h \
   /home/icpero/Documents/3\ semester/CourseWork/Client/registerwindow.ui \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/resultsadminwindow.cpp \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/resultsadminwindow.h \
+  /home/icpero/Documents/3\ semester/CourseWork/Client/resultsadminwindow.ui \
   /home/icpero/Documents/3\ semester/CourseWork/Client/resultswindow.cpp \
   /home/icpero/Documents/3\ semester/CourseWork/Client/resultswindow.h \
   /home/icpero/Documents/3\ semester/CourseWork/Client/resultswindow.ui \
