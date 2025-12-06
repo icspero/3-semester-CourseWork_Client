@@ -153,7 +153,7 @@ public:
         resultsadminwindow->setWindowTitle(QCoreApplication::translate("resultsadminwindow", "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202\321\213 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\320\265\320\271", nullptr));
         label->setText(QCoreApplication::translate("resultsadminwindow", "\320\237\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\214", nullptr));
         label_2->setText(QCoreApplication::translate("resultsadminwindow", "\320\242\320\265\320\274\320\260", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("resultsadminwindow", "\320\237\320\276\321\201\320\274\320\276\321\202\321\200\320\265\321\202\321\214", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("resultsadminwindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214", nullptr));
         pushButton_4->setText(QCoreApplication::translate("resultsadminwindow", "\320\227\320\260\320\277\320\270\321\201\320\260\321\202\321\214 \320\262 \321\204\320\260\320\271\320\273", nullptr));
         pushButton_5->setText(QCoreApplication::translate("resultsadminwindow", "\320\223\320\273\320\260\320\262\320\275\320\276\320\265 \320\274\320\265\320\275\321\216", nullptr));
     } // retranslateUi

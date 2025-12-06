@@ -113,7 +113,7 @@
             </size>
            </property>
            <property name="text">
-            <string>Посмотреть</string>
+            <string>Выбрать</string>
            </property>
           </widget>
          </item>
