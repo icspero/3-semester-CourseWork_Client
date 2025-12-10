@@ -47,6 +47,7 @@ public:
         if (user_rolewindow->objectName().isEmpty())
             user_rolewindow->setObjectName("user_rolewindow");
         user_rolewindow->resize(800, 600);
+        user_rolewindow->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(user_rolewindow);
         verticalLayout->setObjectName("verticalLayout");
         widget_2 = new QWidget(user_rolewindow);
@@ -65,6 +66,16 @@ public:
         sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
         comboBox->setSizePolicy(sizePolicy);
         comboBox->setMinimumSize(QSize(200, 30));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff; \n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff;\n"
+"       selection-background-color: #3498db;\n"
+"       selection-color: white;\n"
+"}"));
 
         horizontalLayout->addWidget(comboBox);
 
@@ -77,6 +88,15 @@ public:
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
         pushButton->setMinimumSize(QSize(100, 30));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         horizontalLayout->addWidget(pushButton);
 
@@ -93,6 +113,7 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         tableWidget = new QTableWidget(widget_3);
         tableWidget->setObjectName("tableWidget");
+        tableWidget->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
 
         verticalLayout_3->addWidget(tableWidget);
 
@@ -108,6 +129,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(200, 50));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         verticalLayout_2->addWidget(pushButton_2);
 
@@ -116,6 +145,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
         pushButton_3->setSizePolicy(sizePolicy);
         pushButton_3->setMinimumSize(QSize(200, 50));
+        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout_2->addWidget(pushButton_3);
 

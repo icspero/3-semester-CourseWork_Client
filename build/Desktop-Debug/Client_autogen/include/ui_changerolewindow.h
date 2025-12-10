@@ -46,6 +46,7 @@ public:
         if (changerole->objectName().isEmpty())
             changerole->setObjectName("changerole");
         changerole->resize(800, 600);
+        changerole->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(changerole);
         verticalLayout->setObjectName("verticalLayout");
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
@@ -58,6 +59,8 @@ public:
         verticalLayout_2->setObjectName("verticalLayout_2");
         label_2 = new QLabel(widget);
         label_2->setObjectName("label_2");
+        label_2->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label_2, 0, Qt::AlignHCenter);
 
@@ -69,6 +72,16 @@ public:
         sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
         comboBox->setSizePolicy(sizePolicy);
         comboBox->setMinimumSize(QSize(250, 30));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff; \n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff;\n"
+"       selection-background-color: #3498db;\n"
+"       selection-color: white;\n"
+"}"));
 
         verticalLayout_2->addWidget(comboBox);
 
@@ -78,6 +91,8 @@ public:
 
         label = new QLabel(widget);
         label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label, 0, Qt::AlignHCenter);
 
@@ -86,6 +101,16 @@ public:
         sizePolicy.setHeightForWidth(comboBox_2->sizePolicy().hasHeightForWidth());
         comboBox_2->setSizePolicy(sizePolicy);
         comboBox_2->setMinimumSize(QSize(250, 30));
+        comboBox_2->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff; \n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff;\n"
+"       selection-background-color: #3498db;\n"
+"       selection-color: white;\n"
+"}"));
 
         verticalLayout_2->addWidget(comboBox_2);
 
@@ -105,6 +130,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
         pushButton->setMinimumSize(QSize(200, 50));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         verticalLayout_3->addWidget(pushButton);
 
@@ -117,6 +150,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(200, 50));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout_3->addWidget(pushButton_2);
 

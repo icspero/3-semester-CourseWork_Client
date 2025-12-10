@@ -10,9 +10,11 @@ MainWindow::MainWindow(QWidget *parent)
     , Connect(new Connection(SERVER_IP, PORT))
 {
     ui->setupUi(this);
+
     for (auto button : findChildren<QPushButton*>()) {
         button->setFocusPolicy(Qt::NoFocus);
     }
+    qApp->setStyleSheet("QMessageBox QLabel { color: black; }" "QMessageBox QPushButton { color: black; }");
 }
 
 MainWindow::~MainWindow()

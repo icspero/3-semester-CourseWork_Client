@@ -14,6 +14,7 @@ deletetaskwindow::deletetaskwindow(Connection *connection, QWidget *parent)
     for (auto button : findChildren<QPushButton*>()) {
         button->setFocusPolicy(Qt::NoFocus);
     }
+    qApp->setStyleSheet("QMessageBox QLabel { color: black; }" "QMessageBox QPushButton { color: black; }");
 }
 
 deletetaskwindow::~deletetaskwindow()

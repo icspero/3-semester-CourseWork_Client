@@ -47,9 +47,10 @@ public:
         if (theorywindow->objectName().isEmpty())
             theorywindow->setObjectName("theorywindow");
         theorywindow->resize(800, 600);
+        theorywindow->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(theorywindow);
         verticalLayout->setObjectName("verticalLayout");
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_2 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer_2);
 
@@ -59,6 +60,8 @@ public:
         verticalLayout_2->setObjectName("verticalLayout_2");
         label = new QLabel(widget);
         label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label, 0, Qt::AlignHCenter);
 
@@ -70,6 +73,16 @@ public:
         sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
         comboBox->setSizePolicy(sizePolicy);
         comboBox->setMinimumSize(QSize(250, 30));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff; \n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff;\n"
+"       selection-background-color: #3498db;\n"
+"       selection-color: white;\n"
+"}"));
 
         verticalLayout_2->addWidget(comboBox, 0, Qt::AlignHCenter);
 
@@ -78,10 +91,18 @@ public:
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(125, 30));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         verticalLayout_2->addWidget(pushButton_2, 0, Qt::AlignHCenter);
 
-        verticalSpacer_3 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_3 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_3);
 
@@ -97,6 +118,8 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         label_2 = new QLabel(widget_2);
         label_2->setObjectName("label_2");
+        label_2->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_3->addWidget(label_2, 0, Qt::AlignHCenter);
 
@@ -104,7 +127,8 @@ public:
         textEdit->setObjectName("textEdit");
         sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
         textEdit->setSizePolicy(sizePolicy);
-        textEdit->setMinimumSize(QSize(500, 50));
+        textEdit->setMinimumSize(QSize(600, 30));
+        textEdit->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
 
         verticalLayout_3->addWidget(textEdit, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
@@ -113,6 +137,8 @@ public:
 
         label_3 = new QLabel(widget);
         label_3->setObjectName("label_3");
+        label_3->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label_3, 0, Qt::AlignHCenter);
 
@@ -120,7 +146,8 @@ public:
         textEdit_2->setObjectName("textEdit_2");
         sizePolicy.setHeightForWidth(textEdit_2->sizePolicy().hasHeightForWidth());
         textEdit_2->setSizePolicy(sizePolicy);
-        textEdit_2->setMinimumSize(QSize(500, 175));
+        textEdit_2->setMinimumSize(QSize(700, 270));
+        textEdit_2->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
 
         verticalLayout_2->addWidget(textEdit_2, 0, Qt::AlignHCenter);
 
@@ -132,10 +159,18 @@ public:
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
         pushButton->setMinimumSize(QSize(200, 50));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout->addWidget(pushButton, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
-        verticalSpacer = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer);
 

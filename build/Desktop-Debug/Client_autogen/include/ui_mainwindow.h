@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -27,9 +28,12 @@ public:
     QWidget *widget;
     QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer;
+    QLabel *label;
+    QSpacerItem *verticalSpacer_4;
     QPushButton *startButton;
-    QSpacerItem *verticalSpacer_3;
+    QSpacerItem *verticalSpacer_5;
     QPushButton *exitButton;
+    QSpacerItem *verticalSpacer_3;
     QSpacerItem *verticalSpacer_2;
 
     void setupUi(QMainWindow *MainWindow)
@@ -37,6 +41,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -49,26 +54,66 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer);
 
+        label = new QLabel(widget);
+        label->setObjectName("label");
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setPointSize(20);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("color: black;"));
+
+        verticalLayout_2->addWidget(label, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_4);
+
         startButton = new QPushButton(widget);
         startButton->setObjectName("startButton");
         startButton->setMinimumSize(QSize(400, 100));
-        QFont font;
-        font.setPointSize(16);
-        font.setBold(false);
-        startButton->setFont(font);
+        QFont font1;
+        font1.setPointSize(16);
+        font1.setBold(false);
+        startButton->setFont(font1);
+        startButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         verticalLayout_2->addWidget(startButton, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+        verticalSpacer_5 = new QSpacerItem(20, 10, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_2->addItem(verticalSpacer_5);
+
+        exitButton = new QPushButton(widget);
+        exitButton->setObjectName("exitButton");
+        sizePolicy.setHeightForWidth(exitButton->sizePolicy().hasHeightForWidth());
+        exitButton->setSizePolicy(sizePolicy);
+        exitButton->setMinimumSize(QSize(400, 100));
+        exitButton->setFont(font1);
+        exitButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
+
+        verticalLayout_2->addWidget(exitButton, 0, Qt::AlignHCenter);
 
         verticalSpacer_3 = new QSpacerItem(20, 5, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout_2->addItem(verticalSpacer_3);
-
-        exitButton = new QPushButton(widget);
-        exitButton->setObjectName("exitButton");
-        exitButton->setMinimumSize(QSize(400, 100));
-        exitButton->setFont(font);
-
-        verticalLayout_2->addWidget(exitButton, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -87,6 +132,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\321\200\320\276 \320\277\320\276\320\266\320\260\320\273\320\276\320\262\320\260\321\202\321\214!", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "\320\236\320\261\321\203\321\207\320\265\320\275\320\270\320\265 \320\274\320\260\321\202\320\265\320\274\320\260\321\202\320\270\321\207\320\265\321\201\320\272\320\270\320\274 \320\276\321\201\320\275\320\276\320\262\320\260\320\274 \320\272\321\200\320\270\320\277\321\202\320\276\320\273\320\276\320\263\320\270\320\270\360\237\224\220", nullptr));
         startButton->setText(QCoreApplication::translate("MainWindow", "\320\235\320\260\321\207\320\260\321\202\321\214", nullptr));
         exitButton->setText(QCoreApplication::translate("MainWindow", "\320\222\321\213\321\205\320\276\320\264", nullptr));
     } // retranslateUi

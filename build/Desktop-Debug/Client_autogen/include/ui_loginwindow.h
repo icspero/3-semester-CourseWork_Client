@@ -52,6 +52,7 @@ public:
         if (login->objectName().isEmpty())
             login->setObjectName("login");
         login->resize(800, 600);
+        login->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(login);
         verticalLayout->setObjectName("verticalLayout");
         verticalSpacer = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Fixed);
@@ -65,11 +66,13 @@ public:
         loginLabel = new QLabel(widget);
         loginLabel->setObjectName("loginLabel");
         QFont font;
-        font.setBold(false);
+        font.setBold(true);
         font.setItalic(false);
         font.setUnderline(false);
         font.setStrikeOut(false);
         loginLabel->setFont(font);
+        loginLabel->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(loginLabel);
 
@@ -81,6 +84,7 @@ public:
         sizePolicy.setHeightForWidth(loginEdit->sizePolicy().hasHeightForWidth());
         loginEdit->setSizePolicy(sizePolicy);
         loginEdit->setMinimumSize(QSize(250, 25));
+        loginEdit->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
 
         verticalLayout_2->addWidget(loginEdit);
 
@@ -90,6 +94,8 @@ public:
 
         passwordLabel = new QLabel(widget);
         passwordLabel->setObjectName("passwordLabel");
+        passwordLabel->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(passwordLabel);
 
@@ -98,6 +104,7 @@ public:
         sizePolicy.setHeightForWidth(passwordEdit->sizePolicy().hasHeightForWidth());
         passwordEdit->setSizePolicy(sizePolicy);
         passwordEdit->setMinimumSize(QSize(250, 25));
+        passwordEdit->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
         passwordEdit->setEchoMode(QLineEdit::Password);
 
         verticalLayout_2->addWidget(passwordEdit);
@@ -115,12 +122,23 @@ public:
         formLayout_2->setVerticalSpacing(1);
         label = new QLabel(widget_3);
         label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         formLayout_2->setWidget(2, QFormLayout::LabelRole, label);
 
         pushButton = new QPushButton(widget_3);
         pushButton->setObjectName("pushButton");
         pushButton->setMinimumSize(QSize(125, 30));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         formLayout_2->setWidget(2, QFormLayout::FieldRole, pushButton);
 
@@ -143,6 +161,14 @@ public:
         sizePolicy.setHeightForWidth(loginButton->sizePolicy().hasHeightForWidth());
         loginButton->setSizePolicy(sizePolicy);
         loginButton->setMinimumSize(QSize(200, 50));
+        loginButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         verticalLayout_3->addWidget(loginButton);
 
@@ -155,6 +181,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(200, 50));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout_3->addWidget(pushButton_2);
 

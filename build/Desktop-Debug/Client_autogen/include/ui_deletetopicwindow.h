@@ -42,6 +42,7 @@ public:
         if (deletetopicwindow->objectName().isEmpty())
             deletetopicwindow->setObjectName("deletetopicwindow");
         deletetopicwindow->resize(800, 600);
+        deletetopicwindow->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(deletetopicwindow);
         verticalLayout->setObjectName("verticalLayout");
         verticalSpacer = new QSpacerItem(20, 150, QSizePolicy::Minimum, QSizePolicy::Fixed);
@@ -54,6 +55,8 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         label = new QLabel(widget_2);
         label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_3->addWidget(label, 0, Qt::AlignHCenter);
 
@@ -65,6 +68,16 @@ public:
         sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
         comboBox->setSizePolicy(sizePolicy);
         comboBox->setMinimumSize(QSize(250, 30));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff; \n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff;\n"
+"       selection-background-color: #3498db;\n"
+"       selection-color: white;\n"
+"}"));
 
         verticalLayout_3->addWidget(comboBox);
 
@@ -80,6 +93,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
         pushButton->setMinimumSize(QSize(200, 50));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         verticalLayout_2->addWidget(pushButton);
 
@@ -92,6 +113,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(200, 50));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout_2->addWidget(pushButton_2);
 

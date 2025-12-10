@@ -49,6 +49,7 @@ public:
         if (registerwindow->objectName().isEmpty())
             registerwindow->setObjectName("registerwindow");
         registerwindow->resize(800, 600);
+        registerwindow->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(registerwindow);
         verticalLayout->setObjectName("verticalLayout");
         verticalSpacer_4 = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Fixed);
@@ -63,7 +64,10 @@ public:
         label->setObjectName("label");
         QFont font;
         font.setPointSize(11);
+        font.setBold(true);
         label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label);
 
@@ -75,6 +79,7 @@ public:
         sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
         lineEdit->setSizePolicy(sizePolicy);
         lineEdit->setMinimumSize(QSize(250, 25));
+        lineEdit->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
 
         verticalLayout_2->addWidget(lineEdit);
 
@@ -85,6 +90,8 @@ public:
         label_2 = new QLabel(widget);
         label_2->setObjectName("label_2");
         label_2->setFont(font);
+        label_2->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label_2);
 
@@ -96,6 +103,7 @@ public:
         sizePolicy1.setHeightForWidth(lineEdit_2->sizePolicy().hasHeightForWidth());
         lineEdit_2->setSizePolicy(sizePolicy1);
         lineEdit_2->setMinimumSize(QSize(250, 25));
+        lineEdit_2->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
         lineEdit_2->setEchoMode(QLineEdit::Password);
 
         verticalLayout_2->addWidget(lineEdit_2);
@@ -107,12 +115,15 @@ public:
         label_3 = new QLabel(widget);
         label_3->setObjectName("label_3");
         label_3->setFont(font);
+        label_3->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label_3);
 
         lineEdit_3 = new QLineEdit(widget);
         lineEdit_3->setObjectName("lineEdit_3");
         lineEdit_3->setMinimumSize(QSize(250, 25));
+        lineEdit_3->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
         lineEdit_3->setEchoMode(QLineEdit::Password);
 
         verticalLayout_2->addWidget(lineEdit_3);
@@ -141,6 +152,14 @@ public:
         sizePolicy3.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy3);
         pushButton->setMinimumSize(QSize(200, 50));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         verticalLayout_3->addWidget(pushButton);
 
@@ -151,6 +170,14 @@ public:
         pushButton_2 = new QPushButton(widget_2);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setMinimumSize(QSize(200, 50));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout_3->addWidget(pushButton_2);
 

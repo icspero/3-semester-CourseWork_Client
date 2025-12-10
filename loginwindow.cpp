@@ -15,6 +15,7 @@ login::login(Connection *connection, QWidget *parent)
     for (auto button : findChildren<QPushButton*>()) {
         button->setFocusPolicy(Qt::NoFocus);
     }
+    qApp->setStyleSheet("QMessageBox QLabel { color: black; }" "QMessageBox QPushButton { color: black; }");
 }
 
 login::~login()
@@ -33,7 +34,7 @@ void login::on_loginButton_clicked()
         int uid = resp.split("|")[1].toInt();
         connection->userId = uid;
     } else {
-        QMessageBox::warning(this, "Ошибка", "Не удалось получить user_id!");
+        //QMessageBox::warning(this, "Ошибка", "Не удалось получить user_id!");
     }
 
     if (login.isEmpty() || password.isEmpty()) {

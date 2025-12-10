@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Удаление темы</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #ffffff;</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <spacer name="verticalSpacer">
@@ -35,6 +38,10 @@
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item alignment="Qt::AlignHCenter">
        <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">color: #2c3e50;
+font-weight: bold;</string>
+        </property>
         <property name="text">
          <string>Выбрать тему</string>
         </property>
@@ -53,6 +60,18 @@
           <width>250</width>
           <height>30</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+       color: #000000;
+       background-color: #ffffff; 
+}
+QComboBox QAbstractItemView {
+       color: #000000;
+       background-color: #ffffff;
+       selection-background-color: #3498db;
+       selection-color: white;
+}</string>
         </property>
        </widget>
       </item>
@@ -75,6 +94,16 @@
           <width>200</width>
           <height>50</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: black;           
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
         </property>
         <property name="text">
          <string>Удалить</string>
@@ -110,6 +139,16 @@
           <width>200</width>
           <height>50</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #e74c3c; 
+    color: black;               
+    border-radius: 5px;      
+}
+QPushButton:hover {
+    background-color: #c0392b; 
+}</string>
         </property>
         <property name="text">
          <string>Главное меню</string>

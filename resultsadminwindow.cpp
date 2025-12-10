@@ -16,14 +16,18 @@ resultsadminwindow::resultsadminwindow(Connection *connection, QWidget *parent)
     loadTopics();
     loadUsers();
 
-    ui->tableWidget_2->setColumnCount(5);
-    QStringList headers = {"Тема", "Задание", "Правильный ответ", "Ваш ответ", "Статус"};
+    ui->tableWidget_2->setColumnCount(7);
+    QStringList headers = {"Выбрать", "Тема", "Задание", "Правильный ответ", "Ваш ответ", "Статус", "resultId"};
     ui->tableWidget_2->setHorizontalHeaderLabels(headers);
     ui->tableWidget_2->horizontalHeader()->setStretchLastSection(true);
     ui->tableWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget_2->setSelectionBehavior(QAbstractItemView::SelectRows);
 
+    // Скрываем колонку с resultId
+    ui->tableWidget_2->setColumnHidden(6, true);
+
     loadResults();
+    qApp->setStyleSheet("QMessageBox QLabel { color: black; }" "QMessageBox QPushButton { color: black; }");
 }
 
 void resultsadminwindow::loadTopics() {
@@ -33,9 +37,11 @@ void resultsadminwindow::loadTopics() {
 
     ui->comboBox_2->clear();
 
-    ui->comboBox_2->addItem("Все темы");
-
     QStringList topics = result.split("\n", Qt::SkipEmptyParts);
+
+    if (!topics.contains("Темы не найдены")) {
+        ui->comboBox_2->addItem("Все темы");
+    }
 
     for (const QString &topic : topics) {
         ui->comboBox_2->addItem(topic);
@@ -78,11 +84,19 @@ void resultsadminwindow::loadResults(const QString &topic_filter) {
 
         for (int i = 0; i < rows.size(); ++i) {
             QStringList columns = rows[i].split("|");
-            if (columns.size() != 5) continue;
+            if (columns.size() != 6) continue;
 
+            // 0 колонка чекбокс
+            QTableWidgetItem *checkItem = new QTableWidgetItem();
+            checkItem->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+            checkItem->setCheckState(Qt::Unchecked);
+            ui->tableWidget_2->setItem(i, 0, checkItem);
+
+            // Остальные колонки
             for (int j = 0; j < 5; ++j) {
                 QTableWidgetItem *item = new QTableWidgetItem(columns[j]);
-                if (j == 4) {
+
+                if (j == 4) { // статус
                     if (columns[4] == "TRUE") {
                         item->setText("+");
                         item->setTextAlignment(Qt::AlignCenter);
@@ -91,11 +105,13 @@ void resultsadminwindow::loadResults(const QString &topic_filter) {
                         item->setTextAlignment(Qt::AlignCenter);
                     }
                 }
-                ui->tableWidget_2->setItem(i, j, item);
-            }
-        }
 
-        ui->tableWidget_2->resizeColumnsToContents();
+                ui->tableWidget_2->setItem(i, j + 1, item); // сдвиг на +1
+            }
+
+            // Колонка resultId скрыта, индекс 6
+            ui->tableWidget_2->setItem(i, 6, new QTableWidgetItem(columns[5]));
+        }
 
     } catch (const std::runtime_error &e) {
         QMessageBox::critical(this, "Ошибка", e.what());
@@ -158,5 +174,45 @@ void resultsadminwindow::on_pushButton_6_clicked()
 {
     QString topic = ui->comboBox_2->currentText();
     loadResults(topic);
+}
+
+
+void resultsadminwindow::on_pushButton_clicked()
+{
+    QStringList resultIds;
+
+    for (int row = 0; row < ui->tableWidget_2->rowCount(); ++row) {
+        QTableWidgetItem *checkItem = ui->tableWidget_2->item(row, 0);
+        if (checkItem && checkItem->checkState() == Qt::Checked) {
+            QTableWidgetItem *idItem = ui->tableWidget_2->item(row, 6); // колонка resultId
+            if (idItem) {
+                resultIds << idItem->text();
+            }
+        }
+    }
+
+    if (resultIds.isEmpty()) {
+        QMessageBox::warning(this, "Удаление", "Вы не выбрали ни одного результата!");
+        return;
+    }
+
+    if (QMessageBox::question(this, "Удаление", "Вы действительно хотите удалить выбранные результаты?") != QMessageBox::Yes)
+        return;
+
+    QString msg = QString("delete_results|%1").arg(resultIds.join(","));
+    connection->sendMessage(msg.toStdString());
+    QString response = QString::fromStdString(connection->acceptMessage());
+
+    if (response.startsWith("ok")) {
+        for (int row = ui->tableWidget_2->rowCount() - 1; row >= 0; --row) {
+            QTableWidgetItem *checkItem = ui->tableWidget_2->item(row, 0);
+            if (checkItem && checkItem->checkState() == Qt::Checked) {
+                ui->tableWidget_2->removeRow(row);
+            }
+        }
+        QMessageBox::information(this, "Удаление", "Выбранные результаты удалены!");
+    } else {
+        QMessageBox::critical(this, "Ошибка", response);
+    }
 }
 

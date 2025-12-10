@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Роли пользователей</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #ffffff;</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QWidget" name="widget_2" native="true">
@@ -43,6 +46,18 @@
           <width>200</width>
           <height>30</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+       color: #000000;
+       background-color: #ffffff; 
+}
+QComboBox QAbstractItemView {
+       color: #000000;
+       background-color: #ffffff;
+       selection-background-color: #3498db;
+       selection-color: white;
+}</string>
         </property>
        </widget>
       </item>
@@ -76,6 +91,17 @@
           <height>30</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #2ecc71;
+    color: black;              
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: #27ae60;
+}
+</string>
+        </property>
         <property name="text">
          <string>Выбрать</string>
         </property>
@@ -101,7 +127,11 @@
     <widget class="QWidget" name="widget_3" native="true">
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QTableWidget" name="tableWidget"/>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="styleSheet">
+         <string notr="true">color: #000000;background-color: #ffffff;</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -123,6 +153,16 @@
           <height>50</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: black;           
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+        </property>
         <property name="text">
          <string>Записать в файл</string>
         </property>
@@ -141,6 +181,16 @@
           <width>200</width>
           <height>50</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #e74c3c; 
+    color: black;               
+    border-radius: 5px;      
+}
+QPushButton:hover {
+    background-color: #c0392b; 
+}</string>
         </property>
         <property name="text">
          <string>Главное меню</string>

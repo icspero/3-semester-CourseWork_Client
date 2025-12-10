@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -27,6 +28,7 @@ public:
     QSpacerItem *verticalSpacer_3;
     QWidget *widget;
     QVBoxLayout *verticalLayout_2;
+    QLabel *label;
     QFormLayout *formLayout;
     QPushButton *addTopicButton_2;
     QPushButton *addTopicButton_3;
@@ -48,10 +50,11 @@ public:
     {
         if (adminwindow->objectName().isEmpty())
             adminwindow->setObjectName("adminwindow");
-        adminwindow->resize(800, 600);
+        adminwindow->resize(800, 604);
+        adminwindow->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(adminwindow);
         verticalLayout->setObjectName("verticalLayout");
-        verticalSpacer_3 = new QSpacerItem(20, 70, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        verticalSpacer_3 = new QSpacerItem(20, 30, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer_3);
 
@@ -59,6 +62,15 @@ public:
         widget->setObjectName("widget");
         verticalLayout_2 = new QVBoxLayout(widget);
         verticalLayout_2->setObjectName("verticalLayout_2");
+        label = new QLabel(widget);
+        label->setObjectName("label");
+        QFont font;
+        font.setPointSize(20);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("color: black;"));
+
+        verticalLayout_2->addWidget(label, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
         formLayout = new QFormLayout();
         formLayout->setObjectName("formLayout");
         addTopicButton_2 = new QPushButton(widget);
@@ -69,6 +81,15 @@ public:
         sizePolicy.setHeightForWidth(addTopicButton_2->sizePolicy().hasHeightForWidth());
         addTopicButton_2->setSizePolicy(sizePolicy);
         addTopicButton_2->setMinimumSize(QSize(200, 50));
+        addTopicButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         formLayout->setWidget(5, QFormLayout::FieldRole, addTopicButton_2);
 
@@ -77,6 +98,14 @@ public:
         sizePolicy.setHeightForWidth(addTopicButton_3->sizePolicy().hasHeightForWidth());
         addTopicButton_3->setSizePolicy(sizePolicy);
         addTopicButton_3->setMinimumSize(QSize(200, 50));
+        addTopicButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         formLayout->setWidget(9, QFormLayout::LabelRole, addTopicButton_3);
 
@@ -85,6 +114,15 @@ public:
         sizePolicy.setHeightForWidth(addTopicButton_4->sizePolicy().hasHeightForWidth());
         addTopicButton_4->setSizePolicy(sizePolicy);
         addTopicButton_4->setMinimumSize(QSize(200, 50));
+        addTopicButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         formLayout->setWidget(9, QFormLayout::FieldRole, addTopicButton_4);
 
@@ -93,6 +131,14 @@ public:
         sizePolicy.setHeightForWidth(addTopicButton_6->sizePolicy().hasHeightForWidth());
         addTopicButton_6->setSizePolicy(sizePolicy);
         addTopicButton_6->setMinimumSize(QSize(200, 50));
+        addTopicButton_6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         formLayout->setWidget(11, QFormLayout::LabelRole, addTopicButton_6);
 
@@ -101,6 +147,15 @@ public:
         sizePolicy.setHeightForWidth(addTopicButton_5->sizePolicy().hasHeightForWidth());
         addTopicButton_5->setSizePolicy(sizePolicy);
         addTopicButton_5->setMinimumSize(QSize(200, 50));
+        addTopicButton_5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         formLayout->setWidget(11, QFormLayout::FieldRole, addTopicButton_5);
 
@@ -117,6 +172,14 @@ public:
         sizePolicy.setHeightForWidth(addTopicButton->sizePolicy().hasHeightForWidth());
         addTopicButton->setSizePolicy(sizePolicy);
         addTopicButton->setMinimumSize(QSize(200, 50));
+        addTopicButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         formLayout->setWidget(5, QFormLayout::LabelRole, addTopicButton);
 
@@ -125,6 +188,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(200, 50));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         formLayout->setWidget(3, QFormLayout::LabelRole, pushButton_2);
 
@@ -137,6 +208,15 @@ public:
         sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
         pushButton_3->setSizePolicy(sizePolicy);
         pushButton_3->setMinimumSize(QSize(200, 50));
+        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         formLayout->setWidget(3, QFormLayout::FieldRole, pushButton_3);
 
@@ -151,6 +231,15 @@ public:
         sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
         pushButton_4->setSizePolicy(sizePolicy);
         pushButton_4->setMinimumSize(QSize(408, 60));
+        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #f1c40f; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #d4ac0d; \n"
+"}\n"
+""));
 
         verticalLayout->addWidget(pushButton_4, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
@@ -163,6 +252,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
         pushButton->setMinimumSize(QSize(200, 50));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout->addWidget(pushButton, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
@@ -179,6 +276,7 @@ public:
     void retranslateUi(QDialog *adminwindow)
     {
         adminwindow->setWindowTitle(QCoreApplication::translate("adminwindow", "\320\234\320\265\320\275\321\216 \320\260\320\264\320\274\320\270\320\275\320\270\321\201\321\202\321\200\320\260\321\202\320\276\321\200\320\260", nullptr));
+        label->setText(QCoreApplication::translate("adminwindow", "\342\232\231\357\270\217\320\237\320\260\320\275\320\265\320\273\321\214 \320\260\320\264\320\274\320\270\320\275\320\270\321\201\321\202\321\200\320\260\321\202\320\276\321\200\320\260\360\237\233\240\357\270\217", nullptr));
         addTopicButton_2->setText(QCoreApplication::translate("adminwindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
         addTopicButton_3->setText(QCoreApplication::translate("adminwindow", "\320\241\320\276\320\267\320\264\320\260\321\202\321\214 \320\267\320\260\320\264\320\260\320\275\320\270\320\265", nullptr));
         addTopicButton_4->setText(QCoreApplication::translate("adminwindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214 \320\267\320\260\320\264\320\260\320\275\320\270\320\265", nullptr));

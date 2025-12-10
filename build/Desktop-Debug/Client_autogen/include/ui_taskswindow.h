@@ -41,6 +41,7 @@ public:
     QPushButton *pushButton_2;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_3;
+    QLabel *label_3;
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
@@ -53,6 +54,7 @@ public:
         if (taskswindow->objectName().isEmpty())
             taskswindow->setObjectName("taskswindow");
         taskswindow->resize(800, 600);
+        taskswindow->setStyleSheet(QString::fromUtf8("background-color: #ffffff;"));
         verticalLayout = new QVBoxLayout(taskswindow);
         verticalLayout->setObjectName("verticalLayout");
         widget = new QWidget(taskswindow);
@@ -61,6 +63,8 @@ public:
         verticalLayout_2->setObjectName("verticalLayout_2");
         label = new QLabel(widget);
         label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         verticalLayout_2->addWidget(label, 0, Qt::AlignHCenter);
 
@@ -72,6 +76,16 @@ public:
         sizePolicy.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
         comboBox->setSizePolicy(sizePolicy);
         comboBox->setMinimumSize(QSize(250, 30));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff; \n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"       color: #000000;\n"
+"       background-color: #ffffff;\n"
+"       selection-background-color: #3498db;\n"
+"       selection-color: white;\n"
+"}"));
 
         verticalLayout_2->addWidget(comboBox, 0, Qt::AlignHCenter);
 
@@ -80,6 +94,15 @@ public:
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
         pushButton->setMinimumSize(QSize(175, 30));
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         verticalLayout_2->addWidget(pushButton, 0, Qt::AlignHCenter);
 
@@ -94,9 +117,10 @@ public:
         textEdit->setObjectName("textEdit");
         sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
         textEdit->setSizePolicy(sizePolicy);
-        textEdit->setMinimumSize(QSize(500, 230));
+        textEdit->setMinimumSize(QSize(600, 280));
+        textEdit->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
 
-        verticalLayout_3->addWidget(textEdit, 0, Qt::AlignHCenter);
+        verticalLayout_3->addWidget(textEdit, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
 
         verticalLayout->addWidget(widget_2, 0, Qt::AlignHCenter|Qt::AlignVCenter);
@@ -110,6 +134,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
         pushButton_2->setMinimumSize(QSize(175, 30));
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         horizontalLayout->addWidget(pushButton_2);
 
@@ -122,8 +154,22 @@ public:
         sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
         pushButton_3->setSizePolicy(sizePolicy);
         pushButton_3->setMinimumSize(QSize(175, 30));
+        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #3498db; \n"
+"    color: black;           \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}"));
 
         horizontalLayout->addWidget(pushButton_3);
+
+        label_3 = new QLabel(widget_3);
+        label_3->setObjectName("label_3");
+        label_3->setStyleSheet(QString::fromUtf8("color: black;"));
+
+        horizontalLayout->addWidget(label_3);
 
 
         verticalLayout->addWidget(widget_3, 0, Qt::AlignHCenter|Qt::AlignVCenter);
@@ -134,6 +180,8 @@ public:
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         label_2 = new QLabel(widget_4);
         label_2->setObjectName("label_2");
+        label_2->setStyleSheet(QString::fromUtf8("color: #2c3e50;\n"
+"font-weight: bold;"));
 
         horizontalLayout_2->addWidget(label_2, 0, Qt::AlignVCenter);
 
@@ -142,6 +190,7 @@ public:
         sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
         lineEdit->setSizePolicy(sizePolicy);
         lineEdit->setMinimumSize(QSize(300, 30));
+        lineEdit->setStyleSheet(QString::fromUtf8("color: #000000;background-color: #ffffff;"));
 
         horizontalLayout_2->addWidget(lineEdit);
 
@@ -150,6 +199,15 @@ public:
         sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
         pushButton_4->setSizePolicy(sizePolicy);
         pushButton_4->setMinimumSize(QSize(100, 30));
+        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #2ecc71;\n"
+"    color: black;              \n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #27ae60;\n"
+"}\n"
+""));
 
         horizontalLayout_2->addWidget(pushButton_4);
 
@@ -161,6 +219,14 @@ public:
         sizePolicy.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
         pushButton_6->setSizePolicy(sizePolicy);
         pushButton_6->setMinimumSize(QSize(200, 50));
+        pushButton_6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #e74c3c; \n"
+"    color: black;               \n"
+"    border-radius: 5px;      \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c0392b; \n"
+"}"));
 
         verticalLayout->addWidget(pushButton_6, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
@@ -177,6 +243,7 @@ public:
         pushButton->setText(QCoreApplication::translate("taskswindow", "\320\237\320\276\321\201\320\274\320\276\321\202\321\200\320\265\321\202\321\214 \320\267\320\260\320\264\320\260\320\275\320\270\321\217", nullptr));
         pushButton_2->setText(QCoreApplication::translate("taskswindow", "\320\237\321\200\320\265\320\264\321\213\320\264\321\203\321\211\320\265\320\265 \320\267\320\260\320\264\320\260\320\275\320\270\320\265", nullptr));
         pushButton_3->setText(QCoreApplication::translate("taskswindow", "\320\241\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\265 \320\267\320\260\320\264\320\260\320\275\320\270\320\265", nullptr));
+        label_3->setText(QCoreApplication::translate("taskswindow", "TextLabel", nullptr));
         label_2->setText(QCoreApplication::translate("taskswindow", "\320\236\321\202\320\262\320\265\321\202", nullptr));
         pushButton_4->setText(QCoreApplication::translate("taskswindow", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214", nullptr));
         pushButton_6->setText(QCoreApplication::translate("taskswindow", "\320\223\320\273\320\260\320\262\320\275\320\276\320\265 \320\274\320\265\320\275\321\216", nullptr));

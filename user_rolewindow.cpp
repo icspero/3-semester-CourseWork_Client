@@ -25,6 +25,7 @@ user_rolewindow::user_rolewindow(Connection *connection, QWidget *parent)
 
     loadRolesUsers(); // загружаем данные сразу
     loadRoles();
+    qApp->setStyleSheet("QMessageBox QLabel { color: black; }" "QMessageBox QPushButton { color: black; }");
 }
 
 user_rolewindow::~user_rolewindow()

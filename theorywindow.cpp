@@ -17,6 +17,7 @@ theorywindow::theorywindow(Connection *connection, QWidget *parent)
 
     ui->textEdit->setReadOnly(true);
     ui->textEdit_2->setReadOnly(true);
+    qApp->setStyleSheet("QMessageBox QLabel { color: black; }" "QMessageBox QPushButton { color: black; }");
 }
 
 theorywindow::~theorywindow()

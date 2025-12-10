@@ -18,11 +18,24 @@ taskswindow::taskswindow(Connection *connection, QWidget *parent)
         button->setFocusPolicy(Qt::NoFocus);
     }
     ui->textEdit->setReadOnly(true);
+    qApp->setStyleSheet("QMessageBox QLabel { color: black; }" "QMessageBox QPushButton { color: black; }");
+
+    updateTaskCounter();
 }
 
 taskswindow::~taskswindow()
 {
     delete ui;
+}
+
+void taskswindow::updateTaskCounter() {
+    if (tasks.isEmpty()) {
+        ui->label_3->setText("0/0");
+    } else {
+        ui->label_3->setText(QString("%1/%2")
+                                          .arg(currentTaskIndex + 1)
+                                          .arg(tasks.size()));
+    }
 }
 
 void taskswindow::loadTopics() {
@@ -61,8 +74,10 @@ void taskswindow::on_pushButton_clicked()
         if (!tasks.isEmpty()) {
             ui->textEdit->setText(tasks[currentTaskIndex]);
             ui->lineEdit->clear();
+            updateTaskCounter();
         } else {
             ui->textEdit->clear();
+            ui->label_3->setText("0/0");
             QMessageBox::information(this, "Информация", "Задания для этой темы отсутствуют!");
         }
 
@@ -78,6 +93,7 @@ void taskswindow::on_pushButton_3_clicked()
         currentTaskIndex++;
         ui->textEdit->setText(tasks[currentTaskIndex]);
         ui->lineEdit->clear();
+        updateTaskCounter();
     }
 }
 
@@ -88,6 +104,7 @@ void taskswindow::on_pushButton_2_clicked()
         currentTaskIndex--;
         ui->textEdit->setText(tasks[currentTaskIndex]);
         ui->lineEdit->clear();
+        updateTaskCounter();
     }
 }
 
