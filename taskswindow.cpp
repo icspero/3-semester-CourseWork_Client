@@ -32,9 +32,7 @@ void taskswindow::updateTaskCounter() {
     if (tasks.isEmpty()) {
         ui->label_3->setText("0/0");
     } else {
-        ui->label_3->setText(QString("%1/%2")
-                                          .arg(currentTaskIndex + 1)
-                                          .arg(tasks.size()));
+        ui->label_3->setText(QString("%1/%2").arg(currentTaskIndex + 1).arg(tasks.size()));
     }
 }
 

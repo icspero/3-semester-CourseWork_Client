@@ -1,14 +1,14 @@
 #include "connection.h"
 
-SocketRAII::SocketRAII(int fd) : fd_(fd) {}
+Socket::Socket(int fd) : fd_(fd) {}
 
-SocketRAII::~SocketRAII(){
+Socket::~Socket(){
     if (close(fd_) < 0) {
         cerr << "Ошибка при закрытии сокета!" << endl;
     }
 }
 
-int SocketRAII:: get() const { return fd_; }
+int Socket:: get() const { return fd_; }
 
 Connection::Connection(const char* server_ip, int port) : client_socket(socket(AF_INET, SOCK_STREAM, 0)) {
     if (client_socket.get() < 0) {

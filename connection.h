@@ -2,10 +2,10 @@
 #define CONNECTION_H
 #include "header.h"
 
-class SocketRAII{
+class Socket{
 public:
-    SocketRAII(int fd);
-    ~SocketRAII();
+    Socket(int fd);
+    ~Socket();
     int get() const;
 private:
     int fd_;
@@ -19,7 +19,7 @@ public:
     string acceptMessage() ;
     int userId = -1;
 private:
-    SocketRAII client_socket;
+    Socket client_socket;
 };
 
 #endif // CONNECTION_H

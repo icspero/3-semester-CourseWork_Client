@@ -51,7 +51,7 @@
           <string notr="true">color: black;</string>
          </property>
          <property name="text">
-          <string>Обучение математическим основам криптологии🔐</string>
+          <string>Математические основы криптологии🔐</string>
          </property>
         </widget>
        </item>
@@ -96,7 +96,7 @@ QPushButton:hover {
 }</string>
          </property>
          <property name="text">
-          <string>Начать</string>
+          <string>Начать обучение</string>
          </property>
         </widget>
        </item>

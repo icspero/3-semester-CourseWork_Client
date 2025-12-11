@@ -100,7 +100,7 @@ void user_rolewindow::on_pushButton_2_clicked()
 
     QFile file(filePath);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл!");
+        QMessageBox::warning(this, "Ошибка", "Не удалось открыть файл для записи!");
         return;
     }
 

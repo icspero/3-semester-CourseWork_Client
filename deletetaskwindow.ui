@@ -47,7 +47,7 @@ font-weight: bold;</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
        <widget class="QComboBox" name="comboBox">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -102,7 +102,7 @@ font-weight: bold;</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
        <widget class="QComboBox" name="comboBox_2">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">

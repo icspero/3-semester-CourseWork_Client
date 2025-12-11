@@ -82,7 +82,7 @@ public:
 "       selection-color: white;\n"
 "}"));
 
-        verticalLayout_2->addWidget(comboBox);
+        verticalLayout_2->addWidget(comboBox, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
         verticalSpacer_4 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
@@ -111,7 +111,7 @@ public:
 "       selection-color: white;\n"
 "}"));
 
-        verticalLayout_2->addWidget(comboBox_2);
+        verticalLayout_2->addWidget(comboBox_2, 0, Qt::AlignHCenter|Qt::AlignVCenter);
 
 
         verticalLayout->addWidget(widget, 0, Qt::AlignHCenter|Qt::AlignVCenter);
